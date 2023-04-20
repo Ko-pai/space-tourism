@@ -1,0 +1,154 @@
+body {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+body::-webkit-scrollbar {
+  display: none;
+}
+body main {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  transition: all 0.45s ease;
+  display: flex;
+  flex-direction: column;
+}
+body main header {
+  width: 100%;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+body main header .headerLeft {
+  width: 40px;
+  height: 40px;
+  margin-left: 40px;
+}
+body main header .headerLeft img {
+  width: 100%;
+  height: 100%;
+}
+body main header .middleLine {
+  width: 600px;
+  background: rgba(255, 255, 255, 0.459);
+  height: 0.5px;
+  opacity: 0.5;
+  z-index: 1;
+  position: absolute;
+  left: 8%;
+}
+body main header .headerRight {
+  width: 900px;
+  height: 100px;
+  background: linear-gradient(to right, hsla(0, 9%, 98%, 0.05), hsla(0, 6%, 87%, 0.171), hsla(0, 9%, 98%, 0.05));
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  color: white;
+  font-family: "Barlow Condensed", sans-serif;
+}
+body main header .headerRight .innerHeaderRight {
+  width: 800px;
+  position: relative;
+  margin-top: 25px;
+  display: flex;
+  flex-direction: column;
+  margin-left: 150px;
+}
+body main header .headerRight .innerHeaderRight ul {
+  display: flex;
+  flex-direction: row;
+  padding: 0;
+}
+body main header .headerRight .innerHeaderRight ul li {
+  list-style: none;
+  margin-right: 80px;
+  font-size: 20px;
+  letter-spacing: 1.75px;
+  font-weight: 100;
+  cursor: pointer;
+}
+body main header .headerRight .innerHeaderRight ul li span {
+  font-weight: 600;
+  margin-right: 10px;
+}
+body main header .headerRight .slider {
+  width: 50px;
+  height: 5px;
+  background-color: white;
+  position: absolute;
+  top: 70px;
+  transition: all 0.75s ease;
+  border-radius: 5px;
+}
+
+main .second-container {
+  width: 100%;
+  height: calc(100vh - 150px);
+  transition: all 1s ease;
+  display: flex;
+}
+main .second-container .homePageRightSize {
+  flex: 4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main .second-container .homePageRightSize .circle {
+  width: 30%;
+  height: 35%;
+  border-radius: 50%;
+  background-color: white;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 80px;
+  font-size: 30px;
+  font-family: "Cormorant", serif;
+  letter-spacing: 2px;
+  cursor: pointer;
+}
+main .second-container .homePageRightSize :active {
+  transform: scale(0.7);
+}
+main .second-container .homePageLeftSize {
+  flex: 4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main .second-container .homePageLeftSize .innerLeft {
+  width: 70%;
+  height: 100%;
+  display: flex;
+  color: white;
+  flex-direction: column;
+  justify-content: center;
+  text-align: justify;
+}
+main .second-container .homePageLeftSize .innerLeft .pText0 {
+  font-size: 22px;
+  letter-spacing: 5px;
+  font-family: "Barlow Condensed", sans-serif;
+}
+main .second-container .homePageLeftSize .innerLeft .pText {
+  width: 380px;
+  font-size: 18px;
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 200;
+  color: white;
+  line-height: 28px;
+  opacity: 0.86;
+}
+main .second-container .homePageLeftSize .innerLeft h1 {
+  font-size: 130px;
+  font-weight: 500;
+  margin: 0;
+  padding: 0;
+  letter-spacing: 6px;
+  font-family: "Cormorant", serif;
+}/*# sourceMappingURL=style.css.map */
