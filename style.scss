@@ -26,6 +26,10 @@ body{
             display: flex;
             align-items: center;
             justify-content: space-between;
+
+            .hamburger{
+                display: none;
+            }
             // for left
             .headerLeft{
                 width: 40px;
@@ -105,85 +109,186 @@ body{
 }
 //for second-container
 main{
-    .second-container{
-        width: 100%;
-        height: calc(100vh - 150px);
-        transition: all 1s ease;
+    
+    .mainContainer{
+        width: 200vw;
         display: flex;
+        flex-direction: row;
+        overflow-x: scroll;
+        .desti{
+           
 
-        // for right hand side of HOME Page
-       .homePageRightSize{
-            flex: 4;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+        }
+
+        .second-container{
+            width: 100vw;
+        }
+        .third-container{
+            width: 100vw;
+        }
+        .second-container,.third-container{
             
-            .circle{
-                width: 30%;
-                height: 35%;
-                border-radius: 50%;
-                background-color: white;
-                text-align: center;
+            height: calc(100vh - 150px);
+            transition: all 1s ease;
+            display: flex;
+            
+
+            // for right hand side of HOME Page
+        .homePageRightSize{
+                flex: 4;
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                margin-top: 80px;
-                font-size: 30px;
-                font-family:'Cormorant', serif;
-                letter-spacing: 2px;
-                cursor: pointer;
                 
-            }:active{
-                transform: scale(0.7);
-            }
-
-       }
-
-        // for left hand side of HOME Page
-       .homePageLeftSize{
-            flex : 4;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
-            .innerLeft{
-                
-                
-                width: 70%;
-                height: 100%;
-                
-                display: flex;
-                color: white;
-                flex-direction: column;
-                justify-content: center;
-                text-align: justify;
-                .pText0{
-                    font-size: 22px;
-                    letter-spacing: 5px;
-                    font-family: 'Barlow Condensed', sans-serif;
-                }
-                .pText{
-                    width: 380px;
-                    font-size: 18px;
-                    font-family: 'Barlow Condensed', sans-serif;
-                    font-weight: 200;
-                    color: white;
-                    line-height: 28px;
-                    opacity: 0.86;
-                }
-                h1{
-                    font-size: 130px;
-                    font-weight: 500;
-                    margin: 0;
-                    padding: 0;
-                    letter-spacing: 6px;
+                .circle{
+                    width: 30%;
+                    height: 35%;
+                    border-radius: 50%;
+                    background-color: white;
+                    text-align: center;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin-top: 80px;
+                    font-size: 30px;
                     font-family:'Cormorant', serif;
+                    letter-spacing: 2px;
+                    cursor: pointer;
+                    
+                }:active{
+                    transform: scale(0.7);
                 }
-            }
-    
-       }
+
+        }
+
+            // for left hand side of HOME Page
+        .homePageLeftSize{
+                flex : 4;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                
+                .innerLeft{
+                    
+                    
+                    
+                    height: 100%;
+                    
+                    display: flex;
+                    color: white;
+                    flex-direction: column;
+                    justify-content: center;
+                    text-align: justify;
+                    
+                    .pText0{
+                        font-size: 22px;
+                        letter-spacing: 5px;
+                        font-family: 'Barlow Condensed', sans-serif;
+                    }
+                    .pText{
+                        width: 380px;
+                        font-size: 18px;
+                        font-family: 'Barlow Condensed', sans-serif;
+                        font-weight: 300;
+                        color: rgba(255, 255, 255, 0.685);
+                        line-height: 28px;
+                        
+                    }
+                    h1{
+                        font-size: 130px;
+                        font-weight: 500;
+                        margin: 0;
+                        padding: 0;
+                        letter-spacing: 6px;
+                        font-family: 'Castoro Titling', cursive;
+                    }
+                }
+        
+        }
+        }
     }
 }
-@media(max-width : 560px){
+@media(max-width : 500px){
+    body{
+       
+
+        main{
+
+            header{
+                height: 100px;
+                justify-content: space-between;
+
+                .headerRight{
+                    display: none;
+                }
+                
+                .hamburger{
+                    width: 30px;
+                    height: 30px;
+                    display: inline-flex;
+                    margin-right: 40px;
+                }
+                .headerLeft{
+                    width: 50px;
+                    height: 50px;
+                }
+
+
+                .middleLine{
+                    display: none;
+                }
+            }
+        }
+
+        
+    }
+
     
+
+    main{
+        .second-container{
+                display: block;
+                margin-top: 20px;
+
+            .homePageLeftSize{
+
+                .innerLeft{
+                    text-align: center;
+
+                    h1{
+                        font-size: 70px;
+                        margin-bottom: 10px;
+                        margin: 0;
+                        padding: 0;
+                    }
+                    .pText0{
+                        font-size: 18px;
+                        letter-spacing: 3px;
+                        opacity: 0.7;
+                    }
+
+                    .pText{
+                        margin: 0;
+                       
+                        width: 340px;
+                        height: 100px;
+                        font-size: 15px;
+                        font-family: 'Roboto', sans-serif;
+                    }
+                }
+            }
+
+            .homePageRightSize{
+                    flex: 3;
+                    user-select: none;
+                .circle{
+                    width: 150px;
+                    height: 150px;
+                    font-size: 25px;
+                    cursor: pointer;
+                   
+                }
+            }
+        }
+    }
 }

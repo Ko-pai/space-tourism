@@ -23,6 +23,9 @@ body main header {
   align-items: center;
   justify-content: space-between;
 }
+body main header .hamburger {
+  display: none;
+}
 body main header .headerLeft {
   width: 40px;
   height: 40px;
@@ -85,19 +88,30 @@ body main header .headerRight .slider {
   border-radius: 5px;
 }
 
-main .second-container {
-  width: 100%;
+main .mainContainer {
+  width: 200vw;
+  display: flex;
+  flex-direction: row;
+  overflow-x: scroll;
+}
+main .mainContainer .second-container {
+  width: 100vw;
+}
+main .mainContainer .third-container {
+  width: 100vw;
+}
+main .mainContainer .second-container, main .mainContainer .third-container {
   height: calc(100vh - 150px);
   transition: all 1s ease;
   display: flex;
 }
-main .second-container .homePageRightSize {
+main .mainContainer .second-container .homePageRightSize, main .mainContainer .third-container .homePageRightSize {
   flex: 4;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-main .second-container .homePageRightSize .circle {
+main .mainContainer .second-container .homePageRightSize .circle, main .mainContainer .third-container .homePageRightSize .circle {
   width: 30%;
   height: 35%;
   border-radius: 50%;
@@ -112,17 +126,16 @@ main .second-container .homePageRightSize .circle {
   letter-spacing: 2px;
   cursor: pointer;
 }
-main .second-container .homePageRightSize :active {
+main .mainContainer .second-container .homePageRightSize :active, main .mainContainer .third-container .homePageRightSize :active {
   transform: scale(0.7);
 }
-main .second-container .homePageLeftSize {
+main .mainContainer .second-container .homePageLeftSize, main .mainContainer .third-container .homePageLeftSize {
   flex: 4;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-main .second-container .homePageLeftSize .innerLeft {
-  width: 70%;
+main .mainContainer .second-container .homePageLeftSize .innerLeft, main .mainContainer .third-container .homePageLeftSize .innerLeft {
   height: 100%;
   display: flex;
   color: white;
@@ -130,25 +143,84 @@ main .second-container .homePageLeftSize .innerLeft {
   justify-content: center;
   text-align: justify;
 }
-main .second-container .homePageLeftSize .innerLeft .pText0 {
+main .mainContainer .second-container .homePageLeftSize .innerLeft .pText0, main .mainContainer .third-container .homePageLeftSize .innerLeft .pText0 {
   font-size: 22px;
   letter-spacing: 5px;
   font-family: "Barlow Condensed", sans-serif;
 }
-main .second-container .homePageLeftSize .innerLeft .pText {
+main .mainContainer .second-container .homePageLeftSize .innerLeft .pText, main .mainContainer .third-container .homePageLeftSize .innerLeft .pText {
   width: 380px;
   font-size: 18px;
   font-family: "Barlow Condensed", sans-serif;
-  font-weight: 200;
-  color: white;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.685);
   line-height: 28px;
-  opacity: 0.86;
 }
-main .second-container .homePageLeftSize .innerLeft h1 {
+main .mainContainer .second-container .homePageLeftSize .innerLeft h1, main .mainContainer .third-container .homePageLeftSize .innerLeft h1 {
   font-size: 130px;
   font-weight: 500;
   margin: 0;
   padding: 0;
   letter-spacing: 6px;
-  font-family: "Cormorant", serif;
+  font-family: "Castoro Titling", cursive;
+}
+
+@media (max-width: 500px) {
+  body main header {
+    height: 100px;
+    justify-content: space-between;
+  }
+  body main header .headerRight {
+    display: none;
+  }
+  body main header .hamburger {
+    width: 30px;
+    height: 30px;
+    display: inline-flex;
+    margin-right: 40px;
+  }
+  body main header .headerLeft {
+    width: 50px;
+    height: 50px;
+  }
+  body main header .middleLine {
+    display: none;
+  }
+  main .second-container {
+    display: block;
+    margin-top: 20px;
+  }
+  main .second-container .homePageLeftSize .innerLeft {
+    text-align: center;
+  }
+  main .second-container .homePageLeftSize .innerLeft h1 {
+    font-size: 70px;
+    margin-bottom: 10px;
+    margin: 0;
+    padding: 0;
+  }
+  main .second-container .homePageLeftSize .innerLeft .pText0 {
+    font-size: 18px;
+    letter-spacing: 3px;
+    opacity: 0.7;
+  }
+  main .second-container .homePageLeftSize .innerLeft .pText {
+    margin: 0;
+    width: 340px;
+    height: 100px;
+    font-size: 15px;
+    font-family: "Roboto", sans-serif;
+  }
+  main .second-container .homePageRightSize {
+    flex: 3;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+            user-select: none;
+  }
+  main .second-container .homePageRightSize .circle {
+    width: 150px;
+    height: 150px;
+    font-size: 25px;
+    cursor: pointer;
+  }
 }/*# sourceMappingURL=style.css.map */
