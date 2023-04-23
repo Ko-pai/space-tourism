@@ -114,7 +114,8 @@ main{
         width: 200vw;
         display: flex;
         flex-direction: row;
-        overflow-x: scroll;
+        
+
         .desti{
            
 
@@ -122,13 +123,14 @@ main{
 
         .second-container{
             width: 100vw;
+            height: calc(100vh - 150px);
         }
         .third-container{
             width: 100vw;
+            height: calc(100vh - 150px);
         }
         .second-container,.third-container{
             
-            height: calc(100vh - 150px);
             transition: all 1s ease;
             display: flex;
             
