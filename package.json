@@ -1,0 +1,20 @@
+{
+  "name": "space-tourism",
+  "version": "1.0.0",
+  "description": "",
+  "main": "scripts.js",
+  "scripts": {
+    "start": "index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ko-pai/space-tourism.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ko-pai/space-tourism/issues"
+  },
+  "homepage": "https://github.com/Ko-pai/space-tourism#readme"
+}

@@ -27,8 +27,8 @@ body main header .hamburger {
   display: none;
 }
 body main header .headerLeft {
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
   margin-left: 40px;
 }
 body main header .headerLeft img {
@@ -89,29 +89,349 @@ body main header .headerRight .slider {
 }
 
 main .mainContainer {
-  width: 200vw;
+  width: 400vw;
   display: flex;
   flex-direction: row;
-  overflow-x: scroll;
 }
 main .mainContainer .second-container {
   width: 100vw;
+  height: calc(100vh - 150px);
 }
 main .mainContainer .third-container {
   width: 100vw;
-}
-main .mainContainer .second-container, main .mainContainer .third-container {
   height: calc(100vh - 150px);
-  transition: all 1s ease;
+  align-items: center;
+  justify-content: center;
+}
+main .mainContainer .third-container .innerThird {
+  width: 80%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+main .mainContainer .third-container .innerThird .pickDestination {
+  width: 100%;
+  height: 110px;
   display: flex;
 }
-main .mainContainer .second-container .homePageRightSize, main .mainContainer .third-container .homePageRightSize {
+main .mainContainer .third-container .innerThird .pickDestination p {
+  margin: 0;
+  padding: 0;
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 24px;
+  letter-spacing: 5px;
+  color: white;
+}
+main .mainContainer .third-container .innerThird .pickDestination p span {
+  font-size: 24px;
+  color: rgba(226, 221, 221, 0.473);
+  margin-right: 20px;
+  font-weight: 500;
+}
+main .mainContainer .third-container .innerThird .destination {
+  width: 100%;
+  height: calc(100% - 150px);
+  display: flex;
+}
+main .mainContainer .third-container .innerThird .destination .innerDestinatinLeftSide {
   flex: 4;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-main .mainContainer .second-container .homePageRightSize .circle, main .mainContainer .third-container .homePageRightSize .circle {
+main .mainContainer .third-container .innerThird .destination .innerDestinatinLeftSide .universePhoto {
+  width: 400px;
+  height: 400px;
+  transition: all 1.5s ease;
+}
+main .mainContainer .third-container .innerThird .destination .innerDestinatinLeftSide .rotateImage {
+  transform: rotate(360deg);
+}
+main .mainContainer .third-container .innerThird .destination .innerDestinatinRightSide {
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+main .mainContainer .third-container .innerThird .destination .innerDestinatinRightSide .list-of-universe {
+  width: 90%;
+  height: 80px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+main .mainContainer .third-container .innerThird .destination .innerDestinatinRightSide .list-of-universe .universeListSlider {
+  height: 5px;
+  background-color: white;
+  position: absolute;
+  top: 60px;
+  transition: all 1s ease;
+  border-radius: 10px;
+}
+main .mainContainer .third-container .innerThird .destination .innerDestinatinRightSide .list-of-universe .destinationUL {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+main .mainContainer .third-container .innerThird .destination .innerDestinatinRightSide .list-of-universe .destinationUL li {
+  margin-right: 20px;
+  list-style: none;
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 20px;
+  color: white;
+  letter-spacing: 4px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  cursor: pointer;
+}
+main .mainContainer .third-container .innerThird .destination .innerDestinatinRightSide .text-of-universe {
+  width: 90%;
+  height: 300px;
+}
+main .mainContainer .third-container .innerThird .destination .innerDestinatinRightSide .text-of-universe .universeInfo {
+  width: 70%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  color: white;
+  border-bottom: 0.2px solid rgba(255, 255, 255, 0.459);
+}
+main .mainContainer .third-container .innerThird .destination .innerDestinatinRightSide .text-of-universe .universeInfo span {
+  width: 80%;
+  font-size: 90px;
+  font-weight: 300;
+  margin: 0;
+  padding: 0;
+  font-family: "Castoro Titling", cursive;
+}
+main .mainContainer .third-container .innerThird .destination .innerDestinatinRightSide .text-of-universe .universeInfo p {
+  font-family: "Barlow Condensed", sans-serif;
+  width: 330px;
+  text-align: start;
+  font-size: 18px;
+  text-overflow: ellipsis;
+}
+main .mainContainer .third-container .innerThird .destination .innerDestinatinRightSide .distance-of-universe {
+  width: 90%;
+  height: 120px;
+  margin-top: 20px;
+  display: flex;
+}
+main .mainContainer .third-container .innerThird .destination .innerDestinatinRightSide .distance-of-universe .avg_Distance {
+  flex: 2;
+  height: 80%;
+}
+main .mainContainer .third-container .innerThird .destination .innerDestinatinRightSide .distance-of-universe .avg_Distance span {
+  font-size: 15px;
+  font-family: "Barlow Condensed", sans-serif;
+  color: rgba(219, 213, 213, 0.685);
+}
+main .mainContainer .third-container .innerThird .destination .innerDestinatinRightSide .distance-of-universe .avg_Distance p {
+  font-size: 25px;
+  color: white;
+  padding: 0;
+  margin-top: 10px;
+  font-family: "Castoro Titling", cursive;
+}
+main .mainContainer .third-container .innerThird .destination .innerDestinatinRightSide .distance-of-universe .travelTime {
+  flex: 4;
+  height: 80%;
+}
+main .mainContainer .third-container .innerThird .destination .innerDestinatinRightSide .distance-of-universe .travelTime span {
+  font-size: 15px;
+  font-family: "Barlow Condensed", sans-serif;
+  color: rgba(219, 213, 213, 0.685);
+}
+main .mainContainer .third-container .innerThird .destination .innerDestinatinRightSide .distance-of-universe .travelTime p {
+  font-size: 25px;
+  color: white;
+  padding: 0;
+  margin-top: 10px;
+  font-family: "Castoro Titling", cursive;
+}
+main .mainContainer .fourth-container {
+  width: 100vw;
+  height: calc(100vh - 150px);
+  align-items: center;
+  justify-content: center;
+}
+main .mainContainer .fourth-container .innerFourth {
+  width: 80%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+main .mainContainer .fourth-container .innerFourth .pickCrew {
+  width: 100%;
+  height: 110px;
+  display: flex;
+  align-items: center;
+}
+main .mainContainer .fourth-container .innerFourth .pickCrew p {
+  margin: 0;
+  padding: 0;
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 24px;
+  letter-spacing: 5px;
+  color: white;
+}
+main .mainContainer .fourth-container .innerFourth .pickCrew span {
+  font-size: 24px;
+  color: rgba(226, 221, 221, 0.473);
+  margin-right: 20px;
+  font-weight: 500;
+}
+main .mainContainer .fourth-container .innerFourth .crew {
+  width: 100%;
+  height: calc(100% - 110px);
+  display: flex;
+}
+main .mainContainer .fourth-container .innerFourth .crew .innerCrewleftSide {
+  flex: 4;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+main .mainContainer .fourth-container .innerFourth .crew .innerCrewleftSide .crewTextBox {
+  width: 90%;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  color: white;
+}
+main .mainContainer .fourth-container .innerFourth .crew .innerCrewleftSide .crewTextBox span {
+  font-family: "Castoro Titling", cursive;
+  font-size: 25px;
+  letter-spacing: 1px;
+  opacity: 0.56;
+  margin-bottom: 15px;
+}
+main .mainContainer .fourth-container .innerFourth .crew .innerCrewleftSide .crewTextBox h1 {
+  font-size: 45px;
+  font-family: "Castoro Titling", cursive;
+  font-weight: 300;
+  margin: 0;
+  padding: 0;
+}
+main .mainContainer .fourth-container .innerFourth .crew .innerCrewleftSide .crewTextBox p {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-size: 19px;
+  width: 466px;
+  text-align: justify;
+  letter-spacing: 1px;
+  font-weight: 100;
+  line-height: 30px;
+}
+main .mainContainer .fourth-container .innerFourth .crew .innerCrewleftSide .crewSlider {
+  width: 50%;
+  height: 100px;
+  display: flex;
+  align-items: center;
+}
+main .mainContainer .fourth-container .innerFourth .crew .innerCrewleftSide .crewSlider .hoverCircle {
+  height: 12px;
+  background-color: rgb(255, 252, 252);
+  border-radius: 50%;
+  position: absolute;
+  transition: all 0.5s ease;
+}
+main .mainContainer .fourth-container .innerFourth .crew .innerCrewleftSide .crewSlider .crewSliderCircle {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+main .mainContainer .fourth-container .innerFourth .crew .innerCrewleftSide .crewSlider .crewSliderCircle li {
+  width: 12px;
+  height: 12px;
+  background-color: rgb(255, 252, 252);
+  margin-right: 25px;
+  border-radius: 50%;
+  opacity: 0.295;
+}
+main .mainContainer .fourth-container .innerFourth .crew .innerCrewRightSide {
+  flex: 4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+main .mainContainer .fourth-container .innerFourth .crew .innerCrewRightSide .crewImage {
+  width: 80%;
+  height: 120%;
+  position: absolute;
+  transition: all 1s ease;
+}
+main .mainContainer .fourth-container .innerFourth .crew .innerCrewRightSide .moveCrewImageBack {
+  transform: translateX(0px);
+}
+main .mainContainer .fourth-container .innerFourth .crew .innerCrewRightSide .moveCrewImage {
+  transform: translateX(800px);
+}
+main .mainContainer .fifth-container {
+  width: 100vw;
+  height: calc(100vh - 150px);
+  color: white;
+  display: flex;
+  justify-content: end;
+}
+main .mainContainer .fifth-container .innerFifth {
+  width: calc(100% - 150px);
+  background-color: green;
+  height: 100%;
+}
+main .mainContainer .fifth-container .innerFifth .pickTechnology {
+  width: 100%;
+  height: 110px;
+  display: flex;
+  align-items: center;
+}
+main .mainContainer .fifth-container .innerFifth .pickTechnology p {
+  margin: 0;
+  padding: 0;
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 24px;
+  letter-spacing: 5px;
+  color: white;
+}
+main .mainContainer .fifth-container .innerFifth .pickTechnology span {
+  font-size: 24px;
+  color: rgba(226, 221, 221, 0.473);
+  margin-right: 20px;
+  font-weight: 500;
+}
+main .mainContainer .fifth-container .innerFifth .technologyContent {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+main .mainContainer .fifth-container .innerFifth .technologyContent .left {
+  flex: 5;
+  background-color: crimson;
+}
+main .mainContainer .fifth-container .innerFifth .technologyContent .right {
+  flex: 3;
+  background-color: slateblue;
+}
+main .mainContainer .second-container, main .mainContainer .fifth-container, main .mainContainer .fourth-container {
+  transition: all 1s ease;
+  display: flex;
+}
+main .mainContainer .second-container .homePageRightSize, main .mainContainer .fifth-container .homePageRightSize, main .mainContainer .fourth-container .homePageRightSize {
+  flex: 4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main .mainContainer .second-container .homePageRightSize .circle, main .mainContainer .fifth-container .homePageRightSize .circle, main .mainContainer .fourth-container .homePageRightSize .circle {
   width: 30%;
   height: 35%;
   border-radius: 50%;
@@ -126,16 +446,16 @@ main .mainContainer .second-container .homePageRightSize .circle, main .mainCont
   letter-spacing: 2px;
   cursor: pointer;
 }
-main .mainContainer .second-container .homePageRightSize :active, main .mainContainer .third-container .homePageRightSize :active {
+main .mainContainer .second-container .homePageRightSize :active, main .mainContainer .fifth-container .homePageRightSize :active, main .mainContainer .fourth-container .homePageRightSize :active {
   transform: scale(0.7);
 }
-main .mainContainer .second-container .homePageLeftSize, main .mainContainer .third-container .homePageLeftSize {
+main .mainContainer .second-container .homePageLeftSize, main .mainContainer .fifth-container .homePageLeftSize, main .mainContainer .fourth-container .homePageLeftSize {
   flex: 4;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-main .mainContainer .second-container .homePageLeftSize .innerLeft, main .mainContainer .third-container .homePageLeftSize .innerLeft {
+main .mainContainer .second-container .homePageLeftSize .innerLeft, main .mainContainer .fifth-container .homePageLeftSize .innerLeft, main .mainContainer .fourth-container .homePageLeftSize .innerLeft {
   height: 100%;
   display: flex;
   color: white;
@@ -143,12 +463,12 @@ main .mainContainer .second-container .homePageLeftSize .innerLeft, main .mainCo
   justify-content: center;
   text-align: justify;
 }
-main .mainContainer .second-container .homePageLeftSize .innerLeft .pText0, main .mainContainer .third-container .homePageLeftSize .innerLeft .pText0 {
+main .mainContainer .second-container .homePageLeftSize .innerLeft .pText0, main .mainContainer .fifth-container .homePageLeftSize .innerLeft .pText0, main .mainContainer .fourth-container .homePageLeftSize .innerLeft .pText0 {
   font-size: 22px;
   letter-spacing: 5px;
   font-family: "Barlow Condensed", sans-serif;
 }
-main .mainContainer .second-container .homePageLeftSize .innerLeft .pText, main .mainContainer .third-container .homePageLeftSize .innerLeft .pText {
+main .mainContainer .second-container .homePageLeftSize .innerLeft .pText, main .mainContainer .fifth-container .homePageLeftSize .innerLeft .pText, main .mainContainer .fourth-container .homePageLeftSize .innerLeft .pText {
   width: 380px;
   font-size: 18px;
   font-family: "Barlow Condensed", sans-serif;
@@ -156,7 +476,7 @@ main .mainContainer .second-container .homePageLeftSize .innerLeft .pText, main 
   color: rgba(255, 255, 255, 0.685);
   line-height: 28px;
 }
-main .mainContainer .second-container .homePageLeftSize .innerLeft h1, main .mainContainer .third-container .homePageLeftSize .innerLeft h1 {
+main .mainContainer .second-container .homePageLeftSize .innerLeft h1, main .mainContainer .fifth-container .homePageLeftSize .innerLeft h1, main .mainContainer .fourth-container .homePageLeftSize .innerLeft h1 {
   font-size: 130px;
   font-weight: 500;
   margin: 0;
