@@ -256,7 +256,7 @@
                 crewPosition.textContent = `${crewData0.role}`
                 crewName.textContent = `${crewData0.name}`
                 crewBio.textContent =`${crewData0.bio}`
-                crewImage.src = `${crewData0.images.png}`
+                crewImage.src = `${crewData0.images.webp}`
                 
             }
         circleLi.addEventListener("click",(e)=>{
@@ -274,7 +274,7 @@
                 crewPosition.textContent = `${crewData0.role}`
                 crewName.textContent = `${crewData0.name}`
                 crewBio.textContent =`${crewData0.bio}`
-                crewImage.src = `${crewData0.images.png}`
+                crewImage.src = `${crewData0.images.webp}`
                 crewImage.style.width = "80%"
                 
             }else if(active == 1) {
@@ -282,19 +282,19 @@
                 crewPosition.textContent = `${crewData1.role}`
                 crewName.textContent = `${crewData1.name}`
                 crewBio.textContent =`${crewData1.bio}`
-                crewImage.src = `${crewData1.images.png}`
+                crewImage.src = `${crewData1.images.webp}`
                 crewImage.style.width = "80%"
             }else if(active == 2) {
                 crewPosition.textContent = `${crewData2.role}`
                 crewName.textContent = `${crewData2.name}`
                 crewBio.textContent =`${crewData2.bio}`
-                crewImage.src = `${crewData2.images.png}`
+                crewImage.src = `${crewData2.images.webp}`
                 crewImage.style.width = "80%"
             }else if(active == 3) {
                 crewPosition.textContent = `${crewData3.role}`
                 crewName.textContent = `${crewData3.name}`
                 crewBio.textContent =`${crewData3.bio}`
-                crewImage.src = `${crewData3.images.png}`
+                crewImage.src = `${crewData3.images.webp}`
                 crewImage.style.width = "90%"
                 
             }
