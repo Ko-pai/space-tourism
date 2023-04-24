@@ -176,7 +176,7 @@
         
         if(i == 0){
             destinationSlider.style.width = width + "px"
-            UNIVERSE_IMAGE.src = "/assets/destination/image-moon.png"
+            UNIVERSE_IMAGE.src = `${data.destinations[0].images.png}`
             universeName.textContent = `${data.destinations[0].name}`
             universeText.textContent = `${data.destinations[0].description}`
             avgDistance.textContent = `${data.destinations[0].distance}`
@@ -191,7 +191,7 @@
                 destinationSlider.style.width = listWidth + "px"
                 destinationSlider.style.transform = `translateX(${moveLeft}px)`
                 if(listTagOfDestination.id == 1){
-                    UNIVERSE_IMAGE.src = "/assets/destination/image-mars.png"
+                    UNIVERSE_IMAGE.src = `${data.destinations[1].images.png}`
                     UNIVERSE_IMAGE.classList.add("rotateImage")
                     UNIVERSE_IMAGE.alt = "Mars"
                     universeName.textContent = `${data.destinations[1].name}`
@@ -200,7 +200,7 @@
                     travelTime.textContent = `${data.destinations[1].travel}`
                     
                 }else if(listTagOfDestination.id == 2){
-                    UNIVERSE_IMAGE.src = "/assets/destination/image-europa.png"
+                    UNIVERSE_IMAGE.src = `${data.destinations[2].images.png}`
                     if(UNIVERSE_IMAGE.classList.contains("rotateImage")){
                         UNIVERSE_IMAGE.classList.remove("rotateImage")
                     }else{
@@ -213,7 +213,7 @@
                     travelTime.textContent = `${data.destinations[2].travel}`
 
                 }else if(listTagOfDestination.id == 0){
-                    UNIVERSE_IMAGE.src = "/assets/destination/image-moon.png"
+                    UNIVERSE_IMAGE.src = `${data.destinations[0].images.png}`
                     if(UNIVERSE_IMAGE.classList.contains("rotateImage")){
                         UNIVERSE_IMAGE.classList.remove("rotateImage")
                     }else{
@@ -223,7 +223,7 @@
                     universeName.textContent = `${data.destinations[0].name}`
                     universeText.textContent = `${data.destinations[0].description}`
                 }else{
-                    UNIVERSE_IMAGE.src = "/assets/destination/image-titan.png"
+                    UNIVERSE_IMAGE.src = `${data.destinations[3].images.png}`
                     if(UNIVERSE_IMAGE.classList.contains("rotateImage")){
                         UNIVERSE_IMAGE.classList.remove("rotateImage")
                     }else{
