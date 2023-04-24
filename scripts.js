@@ -257,14 +257,13 @@
                 crewName.textContent = `${crewData0.name}`
                 crewBio.textContent =`${crewData0.bio}`
                 crewImage.src = `${crewData0.images.webp}`
-                
             }
         circleLi.addEventListener("click",(e)=>{
             const active = e.target.id
             const width = e.target.offsetWidth
             const goLeft = e.target.offsetLeft
             
-            console.log(e);
+            
 
             hoverCircle.style.width = width + "px"
             hoverCircle.style.transform = `translateX(${goLeft}px)`
