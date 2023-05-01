@@ -25,8 +25,8 @@
 
     //background image 
     const bgImage = [
-        {size : 550 , url : `url("assets/home/background-home-mobile.jpg")`},
-        {size : 1400 , url : `url("assets/home/background-home-desktop.jpg")`}
+        {size : 550 , url : `url(./assets/home/background-home-mobile.jpg)`},
+        {size : 1400 , url : `url(./assets/home/background-home-desktop.jpg)`}
 
     ]
 
@@ -78,25 +78,25 @@
         }
         function myfunc1 (){
             if(window.innerWidth < 550){
-                main.style.backgroundImage = `url(/assets/home/background-home-mobile.jpg)`
+                main.style.backgroundImage = `url(./assets/home/background-home-mobile.jpg)`
                 main.style.backgroundSize = "cover"
                 main.style.backgroundPosition = "center"
                 good.style.marginLeft = "0px"
                 console.log(window.innerWidth);
             }else{
-                main.style.backgroundImage = `url(/assets/home/background-home-desktop.jpg)`
+                main.style.backgroundImage = `url(./assets/home/background-home-desktop.jpg)`
                 main.style.backgroundSize = "cover"
                 main.style.backgroundPosition = "center"
             }
         }
         function destifunc(){
             if(window.innerWidth < 550){
-                main.style.backgroundImage = `url(/assets/destination/background-destination-desktop.jpg)`
+                main.style.backgroundImage = `url(./assets/destination/background-destination-desktop.jpg)`
                 main.style.backgroundSize = "cover"
                 good.style.marginLeft = "-90vw"
                 console.log("Desti func is running");
             }else{
-                main.style.backgroundImage = `url(/assets/destination/background-destination-desktop.jpg)`
+                main.style.backgroundImage = `url(./assets/destination/background-destination-desktop.jpg)`
                 main.style.backgroundSize = "cover"
                 good.style.marginLeft = "-100vw"
                 console.log("Desti func is running as desktop");
@@ -144,12 +144,12 @@
                     callWindow()
                     console.log("id is 0");
                 }else if(atag.id == 2){
-                    main.style.backgroundImage = `url("assets/crew/background-crew-desktop.jpg")`
+                    main.style.backgroundImage = `url(./assets/crew/background-crew-desktop.jpg)`
                     main.style.backgroundSize = "cover"
                     crewAppear()
                 }else{
                     technoAppear()
-                    main.style.backgroundImage = `url("assets/technology/background-technology-desktop.jpg")`
+                    main.style.backgroundImage = `url(./assets/technology/background-technology-desktop.jpg)`
                     main.style.backgroundSize = "cover"
                     
                 }
@@ -399,7 +399,7 @@
     const hamburger = document.querySelector(".hamburger")
     
     hamburger.addEventListener("click",()=>{
-        main.style.backgroundImage = `url("assets/destination/background-destination-mobile.jpg")`
+        main.style.backgroundImage = `url("./assets/destination/background-destination-mobile.jpg")`
         main.style.backgroundSize ="cover"
         main.style.backgroundPosition = "center"
 
@@ -409,7 +409,7 @@
 
 const circle = document.querySelector(".circle")
         circle.addEventListener("click",()=>{
-        main.style.backgroundImage = `url(/assets/destination/background-destination-desktop.jpg)`
+        main.style.backgroundImage = `url(./assets/destination/background-destination-desktop.jpg)`
         main.style.backgroundSize ="cover"
         main.style.backgroundPosition = "center"
 
