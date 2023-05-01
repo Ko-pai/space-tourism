@@ -1,189 +1,965 @@
-body{
-    width: 100vw;
-    height: 100vh;
-    margin: 0;
-    padding: 0;
-    &::-webkit-scrollbar{
-        display: none;
-    }
-    
-    main{
-        width: 100%;
-        height: 100%;
-        margin: 0;
-        padding: 0;
-        
-        
-        transition: all 0.45s ease ;
-        display: flex;
-        flex-direction: column;
-
-        // for Header
-        header{
-            width: 100%;
-            height: 150px;
+        body{
+            width: 100vw;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+            &::-webkit-scrollbar{
+                display: none;
+            }
             
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            // for left
-            .headerLeft{
-                width: 40px;
-                height: 40px;
-                margin-left: 40px;
-                img{
+            main{
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+                transition: all 1s ease ;
+                display: flex;
+                flex-direction: column;
+                
+
+                // for Header
+                header{
                     width: 100%;
-                    height: 100%;
-                }
-            }
-
-            //for middle
-            .middleLine{
-                width: 600px;
-                background: rgba(255, 255, 255, 0.459);
-                height: 0.5px;
-                opacity: 0.5;
-                z-index: 1;
-                position: absolute;
-                left: 8%;
-            }
-
-            //for right
-            .headerRight{
-                width: 900px;
-                height: 100px;
-                background: linear-gradient(to right,hsla(0, 9%, 98%, 0.05),hsla(0, 6%, 87%, 0.171),hsla(0, 9%, 98%, 0.05));
-                backdrop-filter: blur(10px);
-                
-                // font-family: 'Crimson Text', serif;
-                color: white;
-                font-family: 'Barlow Condensed', sans-serif;
-                
-                .innerHeaderRight{
-                    width: 800px;
-                    position: relative;
-                    margin-top: 25px;
-                    display: flex;
-                    flex-direction: column;
-                    margin-left: 150px;
+                    height: 150px;
                     
-                    ul{
-                        display: flex;
-                        flex-direction: row;
-                        
-                        padding: 0;
-    
-                        li{
-                            list-style: none;
-                            margin-right: 80px;
-                            font-size: 20px;
-                            letter-spacing: 1.75px;
-                            font-weight: 100;
-                            cursor: pointer;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
 
-                            span{
-                                font-weight: 600;
-                                margin-right: 10px;
+                    .hamburger{
+                        display: none;
+                    }
+                    // for left
+                    .headerLeft{
+                        width: 50px;
+                        height: 50px;
+                        margin-left: 40px;
+                        img{
+                            width: 100%;
+                            height: 100%;
+                        }
+                    }
+
+                    //for middle
+                    .middleLine{
+                        width: 600px;
+                        background: rgba(255, 255, 255, 0.459);
+                        height: 0.5px;
+                        opacity: 0.5;
+                        z-index: 1;
+                        position: absolute;
+                        left: 8%;
+                    }
+
+                    //for right
+                    .headerRight{
+                        width: 900px;
+                        height: 100px;
+                        background: linear-gradient(to right,hsla(0, 9%, 98%, 0.05),hsla(0, 6%, 87%, 0.171),hsla(0, 9%, 98%, 0.05));
+                        backdrop-filter: blur(10px);
+                        
+                        // font-family: 'Crimson Text', serif;
+                        color: white;
+                        font-family: 'Barlow Condensed', sans-serif;
+                        
+                        .innerHeaderRight{
+                            width: 800px;
+                            position: relative;
+                            margin-top: 25px;
+                            display: flex;
+                            flex-direction: column;
+                            margin-left: 150px;
+                            
+                            ul{
+                                display: flex;
+                                flex-direction: row;
                                 
+                                padding: 0;
+            
+                                li{
+                                    list-style: none;
+                                    margin-right: 80px;
+                                    font-size: 20px;
+                                    letter-spacing: 1.75px;
+                                    font-weight: 100;
+                                    cursor: pointer;
+
+                                    span{
+                                        font-weight: 600;
+                                        margin-right: 10px;
+                                        
+                                    }
+                                }
+                            }
+                        }
+                        .slider{
+                            width: 50px;
+                            height: 5px;
+                            background-color: white;
+                            position: absolute;
+                            top: 70px;
+                            transition: all .75s ease;
+                            border-radius: 5px;
+                        }
+                    }
+                }
+            
+            }
+        }
+        
+        main{
+            
+            .mainContainer{
+                width: 400vw;
+                display: flex;
+                flex-direction: row;
+                
+
+                //for second container
+                .second-container{
+                    width: 100vw;
+                    height: calc(100vh - 150px);
+                    transition: all 1s ease;
+                    display: flex;
+                   
+
+                    // for right hand side of HOME Page
+                .homePageRightSize{
+                        flex: 4;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        
+                        .circle{
+                            width: 30%;
+                            height: 35%;
+                            border-radius: 50%;
+                            background-color: white;
+                            text-align: center;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            margin-top: 80px;
+                            font-size: 30px;
+                            font-family: 'Marcellus', serif;
+                            letter-spacing: 2px;
+                            cursor: pointer;
+                            
+                        }:active{
+                            transform: scale(0.7);
+                                              }
+
+                }
+
+                    // for left hand side of HOME Page
+                .homePageLeftSize{
+                        flex : 4;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        
+                        .innerLeft{
+                            
+                            
+                            
+                            height: 100%;
+                            
+                            display: flex;
+                            color: white;
+                            flex-direction: column;
+                            justify-content: center;
+                            text-align: justify;
+                            
+                            .pText0{
+                                font-size: 22px;
+                                letter-spacing: 5px;
+                                font-family: 'Barlow Condensed', sans-serif;
+                            }
+                            .pText{
+                                width: 380px;
+                                font-size: 18px;
+                                font-family: 'Barlow Condensed', sans-serif;
+                                font-weight: 300;
+                                color: rgba(255, 255, 255, 0.685);
+                                line-height: 28px;
+                                
+                            }
+                            h1{
+                                font-size: 130px;
+                                font-weight: 500;
+                                margin: 0;
+                                padding: 0;
+                                letter-spacing: 6px;
+                                font-family: 'Marcellus', serif;
+                            }
+                        }
+                
+                }
+                }
+
+                //for third container
+                .third-container{
+                    width: 100vw;
+                    display: flex;
+                    height: calc(100vh - 150px);
+                    align-items: center;
+                    justify-content: center;
+                    margin-left: 0px;
+                    transition: all 1s ease;
+
+                    .innerThird{
+                        width: 80%;
+                        height: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+
+                        .pickDestination{
+                            width: 100%;
+                            height: 110px;
+                            display: flex;
+                            
+
+                            p{
+                                margin: 0;
+                                padding: 0;
+                                font-family: 'Barlow Condensed', sans-serif;
+                                font-size: 24px;
+                                letter-spacing: 5px;
+                                color: white;
+
+                                span{
+                                    font-size: 24px;
+                                    color: rgba(226, 221, 221, 0.473);
+                                    margin-right: 20px;
+                                    font-weight: 500;
+                                }
+                            }
+                        }
+
+                        .destination{
+                            width: 100vw;
+                            height: calc(100% - 150px);
+                            
+                            display: flex;
+                            
+
+                            .innerDestinatinLeftSide{
+                                flex: 4;
+                                
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+
+                                .universePhoto{
+                                    width: 400px;
+                                    height: 400px;
+                                    
+                                    transition: all 1.5s ease;
+                                }
+                                .rotateImage{
+                                    transform: rotate(360deg);
+                                }
+                            }
+
+
+                            .innerDestinatinRightSide{
+                                flex: 3;
+                                
+                                display: flex;
+                                flex-direction: column;
+                                align-items: center;
+
+
+                                .list-of-universe{
+                                    width: 90%;
+                                    height: 80px;
+                                    
+                                    display: flex;
+                                    flex-direction: column;
+                                    position: relative;
+
+                                    .universeListSlider{
+                                        height: 5px;
+                                        background-color:white;
+                                        position: absolute;
+                                        top: 60px;
+                                        transition: all 1s ease;
+                                        border-radius: 10px;
+                                    }
+                                    
+                                    .destinationUL{
+                                        width: 100%;
+                                        height: 80px;
+                                        display: flex;
+                                        margin: 0;
+                                        padding: 0;
+                                        align-items: center;
+                                        
+
+                                        li{
+                                            margin-right: 20px;
+                                            list-style: none;
+                                            font-family: 'Barlow Condensed', sans-serif;
+                                            font-size: 20px;
+                                            color: white;
+                                            letter-spacing: 4px;
+                                            user-select: none;
+                                            cursor: pointer;
+                                        }
+                                    }
+                                }
+
+                                .text-of-universe{
+                                    width: 90%;
+                                    height: 300px;
+                                    
+                                    
+                                    .universeInfo{
+                                        width: 70%;
+                                        height: 100%;
+                                        display: flex;
+                                        flex-direction: column;
+                                        margin: 0;
+                                        color: white;
+                                        border-bottom: 0.2px solid rgba(255, 255, 255, 0.459);
+                                        
+                                        span{
+                                            width: 80%;
+                                            font-size: 90px;
+                                            font-weight: 300;
+                                            margin: 0;
+                                            padding: 0;
+                                            font-family: 'Castoro Titling', cursive;
+                                            
+                                        }
+                                        
+                                        p{
+                                            font-family: 'Barlow Condensed', sans-serif;
+                                            width: 330px;
+                                            text-align: start;
+                                            font-size: 18px;
+                                            text-overflow: ellipsis;
+                                        }
+                                    }
+                                }
+                                .distance-of-universe{
+                                    width: 90%;
+                                    height: 120px;
+                                    margin-top: 20px;
+                                    display: flex;
+
+                                    .avg_Distance{
+                                        flex: 2;
+                                        height: 80%;
+                                        
+                                        
+                                        
+                                        span{
+                                            font-size: 15px;
+                                            font-family: 'Barlow Condensed', sans-serif;
+                                            color: rgba(219, 213, 213, 0.685);
+                                            
+                                        }
+                                        p{
+                                            font-size: 25px;
+                                            color: white;
+                                            padding: 0;
+                                            margin-top: 10px;
+                                            font-family: 'Castoro Titling', cursive;
+                                        }
+                                    }
+                                    .travelTime{
+                                        flex: 4;
+                                        height: 80%;
+                                        
+                                        
+                                        span{
+                                            font-size: 15px;
+                                            font-family: 'Barlow Condensed', sans-serif;
+                                            color: rgba(219, 213, 213, 0.685);
+                                        
+                                        }
+                                        p{
+                                            font-size: 25px;
+                                            color: white;
+                                            padding: 0;
+                                            margin-top: 10px;
+                                            font-family: 'Castoro Titling', cursive;
+                                            
+                                        }
+                                    }
+
+                                }
+                            }
+                        }
+                    }
+                    
+
+                }
+
+
+                //for fourth container
+                .fourth-container{
+                    width: 100vw;
+                    height: calc(100vh - 150px);
+                    align-items: center;
+                    justify-content: center;
+                    transition: all 1s ease;
+
+                    .innerFourth{
+                        width: 80%;
+                        height: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        
+
+                        .pickCrew{
+                            width: 100%;
+                            height: 110px;
+                            display: flex;
+                            align-items: center;
+                            p{
+                                margin: 0;
+                                padding: 0;
+                                font-family: 'Barlow Condensed', sans-serif;
+                                font-size: 24px;
+                                letter-spacing: 5px;
+                                color: white;
+                            }
+                                span{
+                                    font-size: 24px;
+                                    color: rgba(226, 221, 221, 0.473);
+                                    margin-right: 20px;
+                                    font-weight: 500;
+                                }
+                            
+                        }
+
+                        .crew{
+                            width: 100%;
+                            height: calc(100% - 110px);
+                            
+                            display: flex;
+
+
+                            .innerCrewleftSide{
+                                flex: 4;
+                                
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: space-evenly;
+
+                                .crewTextBox{
+                                    width: 90%;
+                                    height: 300px;
+                                    
+                                    display: flex;
+                                    flex-direction: column;
+                                    color: white;
+
+                                    span{
+                                        font-family: 'Castoro Titling', cursive;
+                                        font-size: 25px;
+                                        letter-spacing: 1px;
+                                        opacity: 0.56;
+                                        margin-bottom: 15px;
+                                    }
+                                    h1{
+                                        font-size: 45px;
+                                        font-family: 'Marcellus', serif;
+                                        font-weight: 200;
+                                        letter-spacing: 3px;
+                                        margin: 0;
+                                        padding: 0;
+                                    }
+                                    p{
+                                        font-family: 'Barlow Semi Condensed', sans-serif;
+                                        font-weight: 200;
+                                        font-size: 18px;
+                                        width: 466px;
+                                        height: 150px;
+                                        text-align: justify;
+                                        line-height: 30px;
+                                        opacity: 0.9;
+                                    }
+
+                                }
+                                .crewSlider{
+                                    width: 50%;
+                                    
+                                    height: 100px;
+                                    display: flex;
+                                    align-items: center;
+                                    
+                                    .hoverCircle{ 
+                                        
+                                        height: 12px;
+                                        background-color: rgb(255, 252, 252);
+                                        border-radius: 50%;
+                                        position: absolute;
+                                        transition: all .5s ease;
+
+                                        
+                                    }
+                                    .crewSliderCircle{
+                                        display: flex;
+                                        list-style: none;
+                                        margin: 0;
+                                        padding: 0;
+                                        position: relative;
+                                        
+                                        
+                                        
+                                        li{
+                                            width: 12px;
+                                            height: 12px;
+                                            background-color: rgb(255, 252, 252);
+                                            margin-right: 25px;
+                                            border-radius: 50%;
+                                            opacity: 0.295;
+                                           
+
+                                            
+                                        }
+                                    }
+                                }
+                            }
+
+
+                            .innerCrewRightSide{
+                                flex: 4;
+                                
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                position: relative;
+
+                                .crewImage{
+                                    width: 80%;
+                                    height: 120%;
+                                    position: absolute;
+                                    
+                                    transition: all 1s ease;
+                                }
+
+                                .moveCrewImageBack {
+                                    transform: translateX(0px);
+                                }
+                                .moveCrewImage {
+                                    transform: translateX(800px);
+                        
+                                }
+                            }
+                        }
+                    }
+
+                }
+
+                // for fifth Container
+                .fifth-container{
+                    width: 100vw;
+                    height: calc(100vh - 150px);
+                    color: white;
+                    display: flex;
+                    justify-content: end;
+                    transition: all 1s ease;
+
+                    .innerFifth{
+                        width: calc(100% - 200px);
+                        
+                       
+
+                        .pickTechnology{
+                            width: 100%;
+                            height: 110px;
+                            display: flex;
+                            align-items: center;
+
+                            p{
+                                margin: 0;
+                                padding: 0;
+                                font-family: 'Barlow Condensed', sans-serif;
+                                font-size: 24px;
+                                letter-spacing: 5px;
+                                color: white;
+                            }
+                                span{
+                                    font-size: 24px;
+                                    color: rgba(226, 221, 221, 0.473);
+                                    margin-right: 20px;
+                                    font-weight: 500;
+                                }
+                            
+                        }
+
+                        .technologyContent{
+                            width: 100%;                           
+                            
+                            display: flex;
+
+
+                            .left{
+                                flex: 3;
+                                
+                                display: flex;
+                                
+                                
+
+                                .technoInnerLeft{
+                                    width: 90%;
+                                    height: 80%;
+                                    display: flex;
+                                    align-items: center;
+
+                                    .ul-con{
+                                        display: flex;
+                                        
+
+                                        .active{
+                                            background-color: white;
+                                            color: black;
+                                        }
+                                        .technoList{
+                                            width: 200px;
+                                            height: 80%;
+                                            margin: 0;
+                                            padding: 0;
+                                            display: flex;
+                                            flex-direction: column;
+                                            justify-content: center;
+                                            margin-top: 70px;
+                                            
+                                            li{
+                                                list-style: none;
+                                                width: 70px;
+                                                height: 70px;
+                                                display: flex;
+                                                align-items: center;
+                                                justify-content: center;
+                                                border-radius: 50%;
+                                                border: 0.5px solid rgba(255, 255, 255, 0.705);
+                                                
+                                                margin-bottom: 30px;
+                                                font-size: 24px;
+                                                transition: all .6s ease-in;
+                                                user-select: none;
+                                                cursor: pointer;
+                                            }
+                                        }
+                                    }
+                                    .technologyText{
+                                        width: 500px;
+                                        height: 60%;
+                                        // margin-top: 70px;
+                                        .theTechnology{
+                                            font-size: 15px;
+                                            font-family: 'Barlow Semi Condensed', sans-serif;
+                                            letter-spacing: 2px;
+                                            color: white;
+                                            font-weight: 100;
+                                            transition: all 1s ease-in;
+                                            
+                                        }
+    
+                                        .option{
+                                            font-size: 45px;
+                                            font-family: 'Marcellus', serif;
+                                            font-weight: 300;
+                                            margin: 0;
+                                            padding: 0;
+                                            margin-top: 10px;
+                                        }
+                                        .launchText{
+                                            width: 383px;
+                                            height: 189px;
+                                            font-family: 'Barlow Semi Condensed', sans-serif;
+                                            text-align: start;
+                                            font-weight: 100;
+                                            font-size: 18px;
+                                            line-height: 30px;
+                                        }
+                                    }
+                                }
+                            }
+                            .right{
+                                flex: 2;
+                                
+                                display: flex;
+                                justify-content: end;
+
+                                img{
+                                    width: 514px;
+                                    height: 500px;
+                                }
                             }
                         }
                     }
                 }
-                .slider{
-                    width: 50px;
-                    height: 5px;
-                    background-color: white;
-                    position: absolute;
-                    top: 70px;
-                    transition: all .75s ease;
-                    border-radius: 5px;
+
+                //for second Container
+                
+            }
+        }
+
+
+
+        /* Responsive Style */
+        @media(max-width : 560px){
+            body{
+                
+
+                main{
+                    
+                    overflow-x: hidden;
+                    &::-webkit-scrollbar{
+                        display: none;
+                    }
+
+                    header{
+                        height: 100px;
+                        justify-content: space-between;
+
+                        .headerRight{
+                            display: none;
+                        }
+                        
+                        .hamburger{
+                            width: 30px;
+                            height: 30px;
+                            display: inline-flex;
+                            margin-right: 40px;
+                        }
+                        .headerLeft{
+                            width: 50px;
+                            height: 50px;
+                        }
+
+
+                        .middleLine{
+                            display: none;
+                        }
+                    }
+                }
+
+                
+            }
+
+            
+
+            main{
+                .mainContainer{
+                    width: 220vw;
+                    height: 100vw;
+                    display: flex;
+                    
+                    
+
+                    .second-container{
+                            width: 100vw;
+                            height: 100vw;
+                            display: block;
+                            margin-top: 20px;
+                            
+
+                        .homePageLeftSize{
+    
+                            .innerLeft{
+                                text-align: center;
+    
+                                h1{
+                                    font-size: 70px;
+                                    margin-bottom: 10px;
+                                    margin: 0;
+                                    padding: 0;
+                                }
+                                .pText0{
+                                    font-size: 18px;
+                                    letter-spacing: 3px;
+                                    opacity: 0.7;
+                                }
+    
+                                .pText{
+                                    margin: 0;
+                                
+                                    width: 340px;
+                                    height: 100px;
+                                    font-size: 15px;
+                                    font-family: 'Roboto', sans-serif;
+                                }
+                                
+                            }
+                        }
+    
+                        .homePageRightSize{
+                                flex: 3;
+                                user-select: none;
+                            .circle{
+                                width: 150px;
+                                height: 150px;
+                                font-size: 25px;
+                                cursor: pointer;
+                                
+                            }
+                        }
+                    }
+
+                    .third-container{
+                        width: 100vw;
+                        height: 150vw;
+                        justify-content: inherit;
+
+                        .innerThird{
+                           align-items: normal;
+                            justify-content: unset;
+                            margin-left: 50px;
+
+                           .pickDestination{
+                                height: 70px;
+                                margin-left: 20px;
+                           }
+
+                            .destination{
+                                width: 100vw;
+                                height: 100vw;
+                                flex-direction: column;
+
+                                
+                                .innerDestinatinLeftSide{
+                                    width: 100%;
+                                    
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+
+
+                                    .universePhoto{
+                                        width: 160px;
+                                        height: 160px;
+                                        margin-left: -100px;
+                                    }
+                                }
+
+                                .innerDestinatinRightSide{
+                                    .list-of-universe{
+                                        width: 80%;
+                                        margin-right: 30px;
+
+                                        .universeListSlider{
+                                            height: 3px;
+                                        }
+                                        .destinationUL{
+
+                                            
+                                            li{
+                                                margin-right: 35px;
+                                            }
+                                        }
+                                    }
+
+
+
+                                    .text-of-universe{
+                                        padding-left: 20px;
+                                        .universeInfo{
+                                            align-items: center;
+
+                                            span{
+                                                font-size: 75px;
+                                                text-align: center;
+                                            }
+                                            p{
+                                                width: 270px;
+                                                height: 50px;
+                                                text-align: center;
+                                                text-overflow: unset;
+                                            }
+                                        }
+                                    }
+                                    .distance-of-universe{
+                                        height: 70px;
+                                        
+                                        .avg_Distance{
+                                            flex: 2;
+                                            margin-left: 10px;
+                                        }
+
+                                        .travelTime{
+                                            flex: 2;
+                                        }
+                                        
+                                    }
+                                    
+                                }
+                            }
+                        }
+                    }
+
+                    .fourth-container{
+                        display: none;
+                    }
+                    .fifth-container{
+                        display: none;
+                    }
+                }
+
+            }
+
+        
+        }
+
+        //mobile 
+        @media(max-width : 390px){
+            main{
+
+                .mainContainer{
+
+                    .second-container{
+                        margin-left: -100vw;
+
+                    }
+                    .third-container{
+                        height: 120vh;
+
+                        .innerThird{
+                            margin-left: 0px;
+                            .pickDestination{
+                                margin-left: 50px;
+                                p{
+                                    font-size: 19px;
+
+                                    span{
+                                        font-size:19px;
+                                        margin-right: 10px;
+                                    }
+                                }
+                            }
+                            .destination{
+
+                                .innerDestinatinLeftSide{
+                                    .universePhoto{
+                                        margin-left: 17px;
+                                    }
+
+                                }
+                                .innerDestinatinRightSide{
+                                    .distance-of-universe{
+                                        margin-left: 30px;
+                                        .travelTime{
+                                            text-align: center;
+                                        }
+                                    }
+                                    
+                                    .text-of-universe{
+                                        .universeInfo{
+                                            width: 100%;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
                 }
             }
         }
-       
-    }
-}
-//for second-container
-main{
-    .second-container{
-        width: 100%;
-        height: calc(100vh - 150px);
-        transition: all 1s ease;
-        display: flex;
-
-        // for right hand side of HOME Page
-       .homePageRightSize{
-            flex: 4;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            
-            .circle{
-                width: 30%;
-                height: 35%;
-                border-radius: 50%;
-                background-color: white;
-                text-align: center;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                margin-top: 80px;
-                font-size: 30px;
-                font-family:'Cormorant', serif;
-                letter-spacing: 2px;
-                cursor: pointer;
-                
-            }:active{
-                transform: scale(0.7);
-            }
-
-       }
-
-        // for left hand side of HOME Page
-       .homePageLeftSize{
-            flex : 4;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
-            .innerLeft{
-                
-                
-                width: 70%;
-                height: 100%;
-                
-                display: flex;
-                color: white;
-                flex-direction: column;
-                justify-content: center;
-                text-align: justify;
-                .pText0{
-                    font-size: 22px;
-                    letter-spacing: 5px;
-                    font-family: 'Barlow Condensed', sans-serif;
-                }
-                .pText{
-                    width: 380px;
-                    font-size: 18px;
-                    font-family: 'Barlow Condensed', sans-serif;
-                    font-weight: 200;
-                    color: white;
-                    line-height: 28px;
-                    opacity: 0.86;
-                }
-                h1{
-                    font-size: 130px;
-                    font-weight: 500;
-                    margin: 0;
-                    padding: 0;
-                    letter-spacing: 6px;
-                    font-family:'Cormorant', serif;
-                }
-            }
-    
-       }
-    }
-}
-@media(max-width : 560px){
-    
-}
