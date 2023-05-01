@@ -15,6 +15,7 @@
                 transition: all 1s ease ;
                 display: flex;
                 flex-direction: column;
+                
 
                 // for Header
                 header{
@@ -105,27 +106,106 @@
             
             }
         }
-        //for second-container
+        
         main{
             
             .mainContainer{
                 width: 400vw;
                 display: flex;
                 flex-direction: row;
-               
+                
 
                 //for second container
                 .second-container{
                     width: 100vw;
                     height: calc(100vh - 150px);
+                    transition: all 1s ease;
+                    display: flex;
+                   
+
+                    // for right hand side of HOME Page
+                .homePageRightSize{
+                        flex: 4;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        
+                        .circle{
+                            width: 30%;
+                            height: 35%;
+                            border-radius: 50%;
+                            background-color: white;
+                            text-align: center;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            margin-top: 80px;
+                            font-size: 30px;
+                            font-family: 'Marcellus', serif;
+                            letter-spacing: 2px;
+                            cursor: pointer;
+                            
+                        }:active{
+                            transform: scale(0.7);
+                                              }
+
+                }
+
+                    // for left hand side of HOME Page
+                .homePageLeftSize{
+                        flex : 4;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        
+                        .innerLeft{
+                            
+                            
+                            
+                            height: 100%;
+                            
+                            display: flex;
+                            color: white;
+                            flex-direction: column;
+                            justify-content: center;
+                            text-align: justify;
+                            
+                            .pText0{
+                                font-size: 22px;
+                                letter-spacing: 5px;
+                                font-family: 'Barlow Condensed', sans-serif;
+                            }
+                            .pText{
+                                width: 380px;
+                                font-size: 18px;
+                                font-family: 'Barlow Condensed', sans-serif;
+                                font-weight: 300;
+                                color: rgba(255, 255, 255, 0.685);
+                                line-height: 28px;
+                                
+                            }
+                            h1{
+                                font-size: 130px;
+                                font-weight: 500;
+                                margin: 0;
+                                padding: 0;
+                                letter-spacing: 6px;
+                                font-family: 'Marcellus', serif;
+                            }
+                        }
+                
+                }
                 }
 
                 //for third container
                 .third-container{
                     width: 100vw;
+                    display: flex;
                     height: calc(100vh - 150px);
                     align-items: center;
                     justify-content: center;
+                    margin-left: 0px;
+                    transition: all 1s ease;
 
                     .innerThird{
                         width: 80%;
@@ -159,7 +239,7 @@
                         }
 
                         .destination{
-                            width: 100%;
+                            width: 100vw;
                             height: calc(100% - 150px);
                             
                             display: flex;
@@ -326,6 +406,7 @@
                     height: calc(100vh - 150px);
                     align-items: center;
                     justify-content: center;
+                    transition: all 1s ease;
 
                     .innerFourth{
                         width: 80%;
@@ -387,20 +468,21 @@
                                     }
                                     h1{
                                         font-size: 45px;
-                                        font-family: 'Castoro Titling', cursive;
-                                        font-weight: 300;
+                                        font-family: 'Marcellus', serif;
+                                        font-weight: 200;
+                                        letter-spacing: 3px;
                                         margin: 0;
                                         padding: 0;
                                     }
                                     p{
                                         font-family: 'Barlow Semi Condensed', sans-serif;
-                                        font-size: 19px;
+                                        font-weight: 200;
+                                        font-size: 18px;
                                         width: 466px;
+                                        height: 150px;
                                         text-align: justify;
-                                        
-                                        letter-spacing: 1px;
-                                        font-weight: 100;
                                         line-height: 30px;
+                                        opacity: 0.9;
                                     }
 
                                 }
@@ -467,6 +549,7 @@
                                 }
                                 .moveCrewImage {
                                     transform: translateX(800px);
+                        
                                 }
                             }
                         }
@@ -481,12 +564,12 @@
                     color: white;
                     display: flex;
                     justify-content: end;
-
+                    transition: all 1s ease;
 
                     .innerFifth{
-                        width: calc(100% - 150px);
-                        background-color: green;
-                        height: 100%;
+                        width: calc(100% - 200px);
+                        
+                       
 
                         .pickTechnology{
                             width: 100%;
@@ -512,110 +595,127 @@
                         }
 
                         .technologyContent{
-                            width: 100%;
-                            height: 100%;
+                            width: 100%;                           
+                            
                             display: flex;
 
 
                             .left{
-                                flex: 5;
-                                background-color: crimson;
+                                flex: 3;
+                                
+                                display: flex;
+                                
+                                
+
+                                .technoInnerLeft{
+                                    width: 90%;
+                                    height: 80%;
+                                    display: flex;
+                                    align-items: center;
+
+                                    .ul-con{
+                                        display: flex;
+                                        
+
+                                        .active{
+                                            background-color: white;
+                                            color: black;
+                                        }
+                                        .technoList{
+                                            width: 200px;
+                                            height: 80%;
+                                            margin: 0;
+                                            padding: 0;
+                                            display: flex;
+                                            flex-direction: column;
+                                            justify-content: center;
+                                            margin-top: 70px;
+                                            
+                                            li{
+                                                list-style: none;
+                                                width: 70px;
+                                                height: 70px;
+                                                display: flex;
+                                                align-items: center;
+                                                justify-content: center;
+                                                border-radius: 50%;
+                                                border: 0.5px solid rgba(255, 255, 255, 0.705);
+                                                
+                                                margin-bottom: 30px;
+                                                font-size: 24px;
+                                                transition: all .6s ease-in;
+                                                user-select: none;
+                                                cursor: pointer;
+                                            }
+                                        }
+                                    }
+                                    .technologyText{
+                                        width: 500px;
+                                        height: 60%;
+                                        // margin-top: 70px;
+                                        .theTechnology{
+                                            font-size: 15px;
+                                            font-family: 'Barlow Semi Condensed', sans-serif;
+                                            letter-spacing: 2px;
+                                            color: white;
+                                            font-weight: 100;
+                                            transition: all 1s ease-in;
+                                            
+                                        }
+    
+                                        .option{
+                                            font-size: 45px;
+                                            font-family: 'Marcellus', serif;
+                                            font-weight: 300;
+                                            margin: 0;
+                                            padding: 0;
+                                            margin-top: 10px;
+                                        }
+                                        .launchText{
+                                            width: 383px;
+                                            height: 189px;
+                                            font-family: 'Barlow Semi Condensed', sans-serif;
+                                            text-align: start;
+                                            font-weight: 100;
+                                            font-size: 18px;
+                                            line-height: 30px;
+                                        }
+                                    }
+                                }
                             }
                             .right{
-                                flex: 3;
-                                background-color: slateblue;
+                                flex: 2;
+                                
+                                display: flex;
+                                justify-content: end;
+
+                                img{
+                                    width: 514px;
+                                    height: 500px;
+                                }
                             }
                         }
                     }
                 }
 
-
-                .second-container,.fifth-container,.fourth-container{
-                    
-                    transition: all 1s ease;
-                    display: flex;
-                    
-
-                    // for right hand side of HOME Page
-                .homePageRightSize{
-                        flex: 4;
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                        
-                        .circle{
-                            width: 30%;
-                            height: 35%;
-                            border-radius: 50%;
-                            background-color: white;
-                            text-align: center;
-                            display: flex;
-                            align-items: center;
-                            justify-content: center;
-                            margin-top: 80px;
-                            font-size: 30px;
-                            font-family:'Cormorant', serif;
-                            letter-spacing: 2px;
-                            cursor: pointer;
-                            
-                        }:active{
-                            transform: scale(0.7);
-                        }
-
-                }
-
-                    // for left hand side of HOME Page
-                .homePageLeftSize{
-                        flex : 4;
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                        
-                        .innerLeft{
-                            
-                            
-                            
-                            height: 100%;
-                            
-                            display: flex;
-                            color: white;
-                            flex-direction: column;
-                            justify-content: center;
-                            text-align: justify;
-                            
-                            .pText0{
-                                font-size: 22px;
-                                letter-spacing: 5px;
-                                font-family: 'Barlow Condensed', sans-serif;
-                            }
-                            .pText{
-                                width: 380px;
-                                font-size: 18px;
-                                font-family: 'Barlow Condensed', sans-serif;
-                                font-weight: 300;
-                                color: rgba(255, 255, 255, 0.685);
-                                line-height: 28px;
-                                
-                            }
-                            h1{
-                                font-size: 130px;
-                                font-weight: 500;
-                                margin: 0;
-                                padding: 0;
-                                letter-spacing: 6px;
-                                font-family: 'Castoro Titling', cursive;
-                            }
-                        }
+                //for second Container
                 
-                }
-                }
             }
         }
-        @media(max-width : 500px){
+
+
+
+        /* Responsive Style */
+        @media(max-width : 560px){
             body{
-            
+                
 
                 main{
+                    
+                    overflow-x: hidden;
+                    &::-webkit-scrollbar{
+                        display: none;
+                    }
 
                     header{
                         height: 100px;
@@ -649,47 +749,215 @@
             
 
             main{
-                .second-container{
-                        display: block;
-                        margin-top: 20px;
+                .mainContainer{
+                    width: 220vw;
+                    height: 100vw;
+                    display: flex;
+                    
+                    
 
-                    .homePageLeftSize{
-
-                        .innerLeft{
-                            text-align: center;
-
-                            h1{
-                                font-size: 70px;
-                                margin-bottom: 10px;
-                                margin: 0;
-                                padding: 0;
-                            }
-                            .pText0{
-                                font-size: 18px;
-                                letter-spacing: 3px;
-                                opacity: 0.7;
-                            }
-
-                            .pText{
-                                margin: 0;
+                    .second-container{
+                            width: 100vw;
+                            height: 100vw;
+                            display: block;
+                            margin-top: 20px;
                             
-                                width: 340px;
-                                height: 100px;
-                                font-size: 15px;
-                                font-family: 'Roboto', sans-serif;
+
+                        .homePageLeftSize{
+    
+                            .innerLeft{
+                                text-align: center;
+    
+                                h1{
+                                    font-size: 70px;
+                                    margin-bottom: 10px;
+                                    margin: 0;
+                                    padding: 0;
+                                }
+                                .pText0{
+                                    font-size: 18px;
+                                    letter-spacing: 3px;
+                                    opacity: 0.7;
+                                }
+    
+                                .pText{
+                                    margin: 0;
+                                
+                                    width: 340px;
+                                    height: 100px;
+                                    font-size: 15px;
+                                    font-family: 'Roboto', sans-serif;
+                                }
+                                
+                            }
+                        }
+    
+                        .homePageRightSize{
+                                flex: 3;
+                                user-select: none;
+                            .circle{
+                                width: 150px;
+                                height: 150px;
+                                font-size: 25px;
+                                cursor: pointer;
+                                
                             }
                         }
                     }
 
-                    .homePageRightSize{
-                            flex: 3;
-                            user-select: none;
-                        .circle{
-                            width: 150px;
-                            height: 150px;
-                            font-size: 25px;
-                            cursor: pointer;
-                        
+                    .third-container{
+                        width: 100vw;
+                        height: 150vw;
+                        justify-content: inherit;
+
+                        .innerThird{
+                           align-items: normal;
+                            justify-content: unset;
+                            margin-left: 50px;
+
+                           .pickDestination{
+                                height: 70px;
+                                margin-left: 20px;
+                           }
+
+                            .destination{
+                                width: 100vw;
+                                height: 100vw;
+                                flex-direction: column;
+
+                                
+                                .innerDestinatinLeftSide{
+                                    width: 100%;
+                                    
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+
+
+                                    .universePhoto{
+                                        width: 160px;
+                                        height: 160px;
+                                        margin-left: -100px;
+                                    }
+                                }
+
+                                .innerDestinatinRightSide{
+                                    .list-of-universe{
+                                        width: 80%;
+                                        margin-right: 30px;
+
+                                        .universeListSlider{
+                                            height: 3px;
+                                        }
+                                        .destinationUL{
+
+                                            
+                                            li{
+                                                margin-right: 35px;
+                                            }
+                                        }
+                                    }
+
+
+
+                                    .text-of-universe{
+                                        padding-left: 20px;
+                                        .universeInfo{
+                                            align-items: center;
+
+                                            span{
+                                                font-size: 75px;
+                                                text-align: center;
+                                            }
+                                            p{
+                                                width: 270px;
+                                                height: 50px;
+                                                text-align: center;
+                                                text-overflow: unset;
+                                            }
+                                        }
+                                    }
+                                    .distance-of-universe{
+                                        height: 70px;
+                                        
+                                        .avg_Distance{
+                                            flex: 2;
+                                            margin-left: 10px;
+                                        }
+
+                                        .travelTime{
+                                            flex: 2;
+                                        }
+                                        
+                                    }
+                                    
+                                }
+                            }
+                        }
+                    }
+
+                    .fourth-container{
+                        display: none;
+                    }
+                    .fifth-container{
+                        display: none;
+                    }
+                }
+
+            }
+
+        
+        }
+
+        //mobile 
+        @media(max-width : 390px){
+            main{
+
+                .mainContainer{
+
+                    .second-container{
+                        margin-left: -100vw;
+
+                    }
+                    .third-container{
+                        height: 120vh;
+
+                        .innerThird{
+                            margin-left: 0px;
+                            .pickDestination{
+                                margin-left: 50px;
+                                p{
+                                    font-size: 19px;
+
+                                    span{
+                                        font-size:19px;
+                                        margin-right: 10px;
+                                    }
+                                }
+                            }
+                            .destination{
+
+                                .innerDestinatinLeftSide{
+                                    .universePhoto{
+                                        margin-left: 17px;
+                                    }
+
+                                }
+                                .innerDestinatinRightSide{
+                                    .distance-of-universe{
+                                        margin-left: 30px;
+                                        .travelTime{
+                                            text-align: center;
+                                        }
+                                    }
+                                    
+                                    .text-of-universe{
+                                        .universeInfo{
+                                            width: 100%;
+                                        }
+                                    }
+                                }
+                            }
                         }
                     }
                 }

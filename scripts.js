@@ -5,7 +5,7 @@
     const good1 = document.querySelector(".third-container")
     const good2 = document.querySelector(".fourth-container")
     const good3 = document.querySelector(".fifth-container")
-    const circle = document.querySelector(".circle")
+    
     
 
     
@@ -78,12 +78,28 @@
         }
         function myfunc1 (){
             if(window.innerWidth < 550){
-                main.style.background = `url("assets/home/background-home-mobile.jpg")`
+                main.style.backgroundImage = `url(/assets/home/background-home-mobile.jpg)`
                 main.style.backgroundSize = "cover"
+                main.style.backgroundPosition = "center"
+                good.style.marginLeft = "0px"
                 console.log(window.innerWidth);
             }else{
-                main.style.background = `url("assets/home/background-home-desktop.jpg")`
+                main.style.backgroundImage = `url(/assets/home/background-home-desktop.jpg)`
                 main.style.backgroundSize = "cover"
+                main.style.backgroundPosition = "center"
+            }
+        }
+        function destifunc(){
+            if(window.innerWidth < 550){
+                main.style.backgroundImage = `url(/assets/destination/background-destination-desktop.jpg)`
+                main.style.backgroundSize = "cover"
+                good.style.marginLeft = "-90vw"
+                console.log("Desti func is running");
+            }else{
+                main.style.backgroundImage = `url(/assets/destination/background-destination-desktop.jpg)`
+                main.style.backgroundSize = "cover"
+                good.style.marginLeft = "-100vw"
+                console.log("Desti func is running as desktop");
             }
         }
 
@@ -92,14 +108,19 @@
             window.addEventListener("load",myfunc1)
             window.addEventListener("resize",myfunc1)
         }
-        callWindow()
+        function callWindow1 (){
+            window.addEventListener("load",destifunc)
+            window.addEventListener("resize",destifunc)
+        }
 
+        callWindow()
+        
 
         if(i == 0){
             slider.style.width = liTag.offsetWidth + "px"
             good.style.backgroundColor = "transparent"
             good.innerHTML = homeAddContent
-        callWindow()
+            
         }
         liTag.addEventListener("click",(e)=>{
                 let leftMove = e.target.offsetLeft
@@ -109,27 +130,26 @@
                 console.log(atag);
                 slider.style.width = width + "px"
                 slider.style.transform = `translateX(${leftMove}px)`
-            
+
             if(atag.id == 1){
-                main.style.background = `url("assets/destination/background-destination-desktop.jpg")`
-                main.style.backgroundSize = "cover"
-                    destinationAppear()
+                destifunc()
+                destinationAppear()
+                
+                
                     
                 }else if(atag.id == 0){
+                    good.innerHTML = homeAddContent
                     myfunc1()
                     homeAppear()
-                    good.innerHTML = homeAddContent
-                    
+                    callWindow()
+                    console.log("id is 0");
                 }else if(atag.id == 2){
-                    crewAppear()
-                    main.style.background = `url("assets/crew/background-crew-desktop.jpg")`
+                    main.style.backgroundImage = `url("assets/crew/background-crew-desktop.jpg")`
                     main.style.backgroundSize = "cover"
-                    good.innerHTML =''
-                    
-
+                    crewAppear()
                 }else{
                     technoAppear()
-                    main.style.background = `url("assets/technology/background-technology-desktop.jpg")`
+                    main.style.backgroundImage = `url("assets/technology/background-technology-desktop.jpg")`
                     main.style.backgroundSize = "cover"
                     
                 }
@@ -159,6 +179,16 @@
     const crewBio = document.querySelector(".crewBio")
     const crewImage = document.querySelector(".crewImage")
 
+    //this variable is for Technology
+    const NUMBER_ARRAY =["1","2","3"]
+    const TEXT_NUMBER = ["one","two","three"]
+    const techonologyList = document.querySelector(".technoList") 
+    const optionToLaunch = document.querySelector('.option')
+    const launchText = document.querySelector(".launchText")
+    const changeImageForTechno = document.querySelector(".changeTechnoImage")
+
+
+    // This ASYNC Function is for fetch data from data.json and add content of destination,crew,trechnology
     takeData()
     async function takeData(){
         const response = await fetch(url)
@@ -166,7 +196,7 @@
         console.log(data.destinations);
 
 
-        //This loop is universe or destination content
+        //This loop for universe or destination content
         for(let i = 0 ; i < universeList.length ; i++){
         const listTagOfDestination = document.createElement("li")
         listTagOfDestination.append(universeList[i])
@@ -184,7 +214,7 @@
         }
 
             listTagOfDestination.addEventListener("click",(e)=>{
-                console.log(e.target.offsetLeft);
+               
                 let moveLeft = e.target.offsetLeft
                 let listWidth = e.target.offsetWidth
                 
@@ -198,6 +228,7 @@
                     universeText.textContent = `${data.destinations[1].description}`
                     avgDistance.textContent = `${data.destinations[1].distance}`
                     travelTime.textContent = `${data.destinations[1].travel}`
+                    universeName.style.fontSize = "75px"
                     
                 }else if(listTagOfDestination.id == 2){
                     UNIVERSE_IMAGE.src = `${data.destinations[2].images.webp}`
@@ -211,6 +242,7 @@
                     universeText.textContent = `${data.destinations[2].description}`
                     avgDistance.textContent = `${data.destinations[2].distance}`
                     travelTime.textContent = `${data.destinations[2].travel}`
+                    universeName.style.fontSize = "60px"
 
                 }else if(listTagOfDestination.id == 0){
                     if(UNIVERSE_IMAGE.classList.contains("rotateImage")){
@@ -221,7 +253,10 @@
                     UNIVERSE_IMAGE.alt = "Moon"
                     universeName.textContent = `${data.destinations[0].name}`
                     universeText.textContent = `${data.destinations[0].description}`
+						  avgDistance.textContent = `${data.destinations[0].distance}`
+                    travelTime.textContent = `${data.destinations[0].travel}`
                     UNIVERSE_IMAGE.src = `${data.destinations[0].images.png}`
+                    universeName.style.fontSize = "75px"
                 }else{
                     UNIVERSE_IMAGE.src = `${data.destinations[3].images.webp}`
                     if(UNIVERSE_IMAGE.classList.contains("rotateImage")){
@@ -234,6 +269,7 @@
                     universeText.textContent = `${data.destinations[3].description}`
                     avgDistance.textContent = `${data.destinations[3].distance}`
                     travelTime.textContent = `${data.destinations[3].travel}`
+                    universeName.style.fontSize = "75px"
                 }
             })
 
@@ -241,104 +277,186 @@
 
 
 
-    //this loop is CREW content
-    for(let i = 0 ; i < 4 ; i++){
-            const circleLi =  document.createElement("li")
-            circleLi.id = i
-            crewslider.append(circleLi)
-            let crewData0 = data.crew[0]
-            let crewData1 = data.crew[1]
-            let crewData2 = data.crew[2]
-            let crewData3= data.crew[3]
+    //this loop for CREW content
+        for(let i = 0 ; i < 4 ; i++){
+                const circleLi =  document.createElement("li")
+                circleLi.id = i
+                crewslider.append(circleLi)
+                let crewData0 = data.crew[0]
+                let crewData1 = data.crew[1]
+                let crewData2 = data.crew[2]
+                let crewData3= data.crew[3]
 
-            if( i == 0 ){
-                hoverCircle.style.width = circleLi.offsetWidth + "px"
-                crewPosition.textContent = `${crewData0.role}`
-                crewName.textContent = `${crewData0.name}`
-                crewBio.textContent =`${crewData0.bio}`
-                crewImage.src = `${crewData0.images.webp}`
+                if( i == 0 ){
+                    hoverCircle.style.width = circleLi.offsetWidth + "px"
+                    crewPosition.textContent = `${crewData0.role}`
+                    crewName.textContent = `${crewData0.name}`
+                    crewBio.textContent =`${crewData0.bio}`
+                    crewImage.src = `${crewData0.images.webp}`
+                }
+            circleLi.addEventListener("click",(e)=>{
+                const active = e.target.id
+                const width = e.target.offsetWidth
+                const goLeft = e.target.offsetLeft
+                
+                
+
+                hoverCircle.style.width = width + "px"
+                hoverCircle.style.transform = `translateX(${goLeft}px)`
+                
+                
+                if(active == 0){
+                    crewPosition.textContent = `${crewData0.role}`
+                    crewName.textContent = `${crewData0.name}`
+                    crewBio.textContent =`${crewData0.bio}`
+                    crewImage.src = `${crewData0.images.webp}`
+                    crewImage.style.width = "80%"
+                    
+                }else if(active == 1) {
+                    
+                    crewPosition.textContent = `${crewData1.role}`
+                    crewName.textContent = `${crewData1.name}`
+                    crewBio.textContent =`${crewData1.bio}`
+                    crewImage.src = `${crewData1.images.webp}`
+                    crewImage.style.width = "80%"
+                }else if(active == 2) {
+                    crewPosition.textContent = `${crewData2.role}`
+                    crewName.textContent = `${crewData2.name}`
+                    crewBio.textContent =`${crewData2.bio}`
+                    crewImage.src = `${crewData2.images.webp}`
+                    crewImage.style.width = "80%"
+                }else if(active == 3) {
+                    
+                    crewPosition.textContent = `${crewData3.role}`
+                    crewName.textContent = `${crewData3.name}`
+                    crewBio.textContent =`${crewData3.bio}`
+                    crewImage.src = `${crewData3.images.webp}`
+                    crewImage.style.width = "90%"
+                    
+                }
+
+            })
             }
-        circleLi.addEventListener("click",(e)=>{
-            const active = e.target.id
-            const width = e.target.offsetWidth
-            const goLeft = e.target.offsetLeft
-            
-            
 
-            hoverCircle.style.width = width + "px"
-            hoverCircle.style.transform = `translateX(${goLeft}px)`
-            
-             
-            if(active == 0){
-                crewPosition.textContent = `${crewData0.role}`
-                crewName.textContent = `${crewData0.name}`
-                crewBio.textContent =`${crewData0.bio}`
-                crewImage.src = `${crewData0.images.webp}`
-                crewImage.style.width = "80%"
-                
-            }else if(active == 1) {
-                
-                crewPosition.textContent = `${crewData1.role}`
-                crewName.textContent = `${crewData1.name}`
-                crewBio.textContent =`${crewData1.bio}`
-                crewImage.src = `${crewData1.images.webp}`
-                crewImage.style.width = "80%"
-            }else if(active == 2) {
-                crewPosition.textContent = `${crewData2.role}`
-                crewName.textContent = `${crewData2.name}`
-                crewBio.textContent =`${crewData2.bio}`
-                crewImage.src = `${crewData2.images.webp}`
-                crewImage.style.width = "80%"
-            }else if(active == 3) {
-                crewPosition.textContent = `${crewData3.role}`
-                crewName.textContent = `${crewData3.name}`
-                crewBio.textContent =`${crewData3.bio}`
-                crewImage.src = `${crewData3.images.webp}`
-                crewImage.style.width = "90%"
-                
+
+    // This loops for Technology
+        for (let i = 0; i < NUMBER_ARRAY.length; i++) {
+            const createList = document.createElement("li")
+            const element = NUMBER_ARRAY[i];
+            const technoData0 =data.technology[0]
+            const technoData1 =data.technology[1]
+            const technoData2 =data.technology[2]
+
+            createList.id = i
+            createList.append(element)
+            techonologyList.append(createList)
+
+            createList.classList.add(`${TEXT_NUMBER[i]}`)
+
+            if(i == 0){
+                optionToLaunch.textContent = `${technoData0.name}`
+                changeImageForTechno.src = `${technoData0.images.portrait}`
+                launchText.textContent =`${technoData0.description}`
+                createList.classList.add("active")
             }
+            
+            createList.addEventListener("click",(e)=>{
 
-        })
+            
+                if(e.target.id == 0){
+                    optionToLaunch.textContent = `${technoData0.name}`
+                    changeImageForTechno.src = `${technoData0.images.portrait}`
+                    launchText.textContent =`${technoData0.description}`
+                    createList.classList.add("active")
+                    twoRemove()
+                    threeRemove()
+                    
+
+                }else if(e.target.id == 1){
+                    optionToLaunch.textContent = `${technoData1.name}`
+                    changeImageForTechno.src = `${technoData1.images.portrait}`
+                    launchText.textContent =`${technoData1.description}`
+                    createList.classList.add("active")
+                    oneRemove()
+                    
+                    threeRemove()
+
+                }else if(e.target.id == 2){
+                    optionToLaunch.textContent = `${technoData2.name}`
+                    changeImageForTechno.src = `${technoData2.images.portrait}`
+                    launchText.textContent =`${technoData2.description}`
+                    createList.classList.add("active")
+                    twoRemove()
+                    oneRemove()
+                }
+
+
+            })
         }
     }
 
 
+    const hamburger = document.querySelector(".hamburger")
+    
+    hamburger.addEventListener("click",()=>{
+        main.style.backgroundImage = `url("assets/destination/background-destination-mobile.jpg")`
+        main.style.backgroundSize ="cover"
+        main.style.backgroundPosition = "center"
 
-   
+        good.style.marginLeft = "-500px"
+    
+    })
 
+const circle = document.querySelector(".circle")
+        circle.addEventListener("click",()=>{
+        main.style.backgroundImage = `url(/assets/destination/background-destination-desktop.jpg)`
+        main.style.backgroundSize ="cover"
+        main.style.backgroundPosition = "center"
+
+        good.style.marginLeft = "-100vw"
 
     
+    })
 
     // Appear function for  home,destination,crew,technology
     function homeAppear (){
-        good1.style.display = "none"
-        good2.style.display = "none"
-        good3.style.display = "none"
-        good.style.display = "flex"
-
+        good.style.marginLeft = "0"
     }
 
-
+        
     function destinationAppear (){
-        good.style.display = "none"
-        good2.style.display = "none"
-        good3.style.display = "none"
-        good1.style.display = "flex"
+        good.style.marginLeft = "-100vw"
         
     }
     function crewAppear (){
-        good1.style.display = "none"
-        good.style.display = "none"
-        good3.style.display = "none"
-        good2.style.display = "flex"
+        good.style.marginLeft = "-190vw"
         
     }
 
 
     function technoAppear (){
-        good1.style.display = "none"
-        good2.style.display = "none"
-        good.style.display = "none"
-        good3.style.display = "flex"
+        good.style.marginLeft = "-300vw"
     }
     
+
+    //for technology
+    function twoRemove(){
+        let removeTwo = document.querySelector(".two")
+        if (removeTwo.classList.contains("active")) {
+               removeTwo.classList.remove("active")
+        }       
+    }
+
+    function oneRemove(){
+        let removeOne = document.querySelector(".one")
+                if (removeOne.classList.contains("active")) {
+                    removeOne.classList.remove("active")
+                }
+    }
+
+    function threeRemove(){
+        let removeThree = document.querySelector(".three")
+                if (removeThree.classList.contains("active")) {
+                    removeThree.classList.remove("active")
+                }
+    }
