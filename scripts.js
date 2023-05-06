@@ -392,7 +392,7 @@
 
             })
             }
-
+            
 
     // This loops for Technology
         for (let i = 0; i < NUMBER_ARRAY.length; i++) {
@@ -409,7 +409,7 @@
             createList.classList.add(`${TEXT_NUMBER[i]}`)
 
             if(i == 0){
-                optionToLaunch.textContent = `${technoData0.name}`
+                optionToLaunch.textContent = `${technoData0.name.toUpperCase()}`
                 changeImageForTechno.src = `${technoData0.images.portrait}`
                 launchText.textContent =`${technoData0.description}`
                 createList.classList.add("active")
@@ -419,7 +419,7 @@
                 
             
                 if(e.target.id == 0){
-                    optionToLaunch.textContent = `${technoData0.name}`
+                    optionToLaunch.textContent = `${technoData0.name.toUpperCase()}`
                     changeImageForTechno.src = `${technoData0.images.portrait}`
                     launchText.textContent =`${technoData0.description}`
                     createList.classList.add("active")
@@ -429,7 +429,7 @@
                     
 
                 }else if(e.target.id == 1){
-                    optionToLaunch.textContent = `${technoData1.name}`
+                    optionToLaunch.textContent = `${technoData1.name.toUpperCase()}`
                     changeImageForTechno.src = `${technoData1.images.portrait}`
                     launchText.textContent =`${technoData1.description}`
                     createList.classList.add("active")
@@ -437,7 +437,7 @@
                     threeRemove()
 
                 }else if(e.target.id == 2){
-                    optionToLaunch.textContent = `${technoData2.name}`
+                    optionToLaunch.textContent = `${technoData2.name.toUpperCase()}`
                     changeImageForTechno.src = `${technoData2.images.portrait}`
                     launchText.textContent =`${technoData2.description}`
                     createList.classList.add("active")
