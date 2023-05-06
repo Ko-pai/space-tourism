@@ -410,7 +410,7 @@
 
             if(i == 0){
                 optionToLaunch.textContent = `${technoData0.name}`
-                changeImageForTechno.src = `${technoData0.images.potrait}`
+                changeImageForTechno.src = `${technoData0.images.portrait}`
                 launchText.textContent =`${technoData0.description}`
                 createList.classList.add("active")
             }
@@ -420,7 +420,7 @@
             
                 if(e.target.id == 0){
                     optionToLaunch.textContent = `${technoData0.name}`
-                    changeImageForTechno.src = `${technoData0.images.potrait}`
+                    changeImageForTechno.src = `${technoData0.images.portrait}`
                     launchText.textContent =`${technoData0.description}`
                     createList.classList.add("active")
                     
@@ -430,7 +430,7 @@
 
                 }else if(e.target.id == 1){
                     optionToLaunch.textContent = `${technoData1.name}`
-                    changeImageForTechno.src = `${technoData1.images.potrait}`
+                    changeImageForTechno.src = `${technoData1.images.portrait}`
                     launchText.textContent =`${technoData1.description}`
                     createList.classList.add("active")
                     oneRemove()
@@ -438,7 +438,7 @@
 
                 }else if(e.target.id == 2){
                     optionToLaunch.textContent = `${technoData2.name}`
-                    changeImageForTechno.src = `${technoData2.images.potrait}`
+                    changeImageForTechno.src = `${technoData2.images.portrait}`
                     launchText.textContent =`${technoData2.description}`
                     createList.classList.add("active")
                     twoRemove()
