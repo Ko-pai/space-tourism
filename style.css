@@ -106,7 +106,7 @@ main .mainContainer {
 main .mainContainer .second-container {
   width: 100vw;
   height: calc(100vh - 150px);
-  transition: all 0.7s ease-in;
+  transition: margin-left 1s ease;
   display: flex;
 }
 main .mainContainer .second-container .homePageRightSize {
@@ -175,7 +175,7 @@ main .mainContainer .third-container {
   align-items: center;
   justify-content: center;
   margin-left: 0px;
-  transition: all 0.7s ease-in;
+  transition: margin-left 1s ease;
 }
 main .mainContainer .third-container .innerThird {
   width: 80%;
@@ -335,7 +335,7 @@ main .mainContainer .fourth-container {
   height: calc(100vh - 150px);
   align-items: center;
   justify-content: center;
-  transition: all 1s ease;
+  transition: margin-left 1s ease;
 }
 main .mainContainer .fourth-container .innerFourth {
   width: 80%;
@@ -459,7 +459,7 @@ main .mainContainer .fifth-container {
   color: white;
   display: flex;
   justify-content: end;
-  transition: all 1s ease;
+  transition: margin-left 1s ease;
 }
 main .mainContainer .fifth-container .innerFifth {
   width: calc(100% - 200px);
@@ -577,7 +577,7 @@ main .mainContainer .fifth-container .innerFifth .technologyContent .right img {
     display: none;
   }
   body main .hamburger .hamburgerImg {
-    transition: all 1s ease;
+    transition: all 0.5s ease;
   }
   body main .hamburgerSlider {
     width: 0;
@@ -587,7 +587,7 @@ main .mainContainer .fifth-container .innerFifth .technologyContent .right img {
             backdrop-filter: blur(10px);
     z-index: 1;
     position: absolute;
-    transition: all 1s ease;
+    transition: width 0.5s ease-in-out;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -895,7 +895,7 @@ main .mainContainer .fifth-container .innerFifth .technologyContent .right img {
     margin-left: 50px;
   }
   main .mainContainer .third-container .innerThird .pickDestination p {
-    font-size: 18px;
+    font-size: 15px;
   }
   main .mainContainer .third-container .innerThird .pickDestination p span {
     font-size: 18px;
@@ -919,6 +919,7 @@ main .mainContainer .fifth-container .innerFifth .technologyContent .right img {
   }
   main .mainContainer .third-container .innerThird .destination .innerDestinatinRightSide .text-of-universe {
     height: 240px;
+    padding: 0;
   }
   main .mainContainer .third-container .innerThird .destination .innerDestinatinRightSide .text-of-universe .universeInfo {
     width: 100%;
@@ -950,6 +951,9 @@ main .mainContainer .fifth-container .innerFifth .technologyContent .right img {
   }
   main .mainContainer .fifth-container .innerFifth .pickTechnology {
     margin-left: 15%;
+  }
+  main .mainContainer .fifth-container .innerFifth .technologyContent .left .technoInnerLeft .ul-con .technoList li {
+    margin-left: 40px;
   }
   main .mainContainer .fifth-container .innerFifth .technologyContent .left .technoInnerLeft .technologyText {
     display: flex;

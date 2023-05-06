@@ -130,7 +130,7 @@ body{
                 .second-container{
                     width: 100vw;
                     height: calc(100vh - 150px);
-                    transition: all .7s ease-in;
+                    transition: margin-left 1s ease;
                     display: flex;
                    
 
@@ -216,7 +216,7 @@ body{
                     align-items: center;
                     justify-content: center;
                     margin-left: 0px;
-                    transition: all .7s ease-in;
+                    transition: margin-left 1s ease;
 
                     .innerThird{
                         width: 80%;
@@ -417,7 +417,7 @@ body{
                     height: calc(100vh - 150px);
                     align-items: center;
                     justify-content: center;
-                    transition: all 1s ease;
+                    transition: margin-left 1s ease;
 
                     .innerFourth{
                         width: 80%;
@@ -575,7 +575,7 @@ body{
                     color: white;
                     display: flex;
                     justify-content: end;
-                    transition: all 1s ease;
+                    transition: margin-left 1s ease;
 
                     .innerFifth{
                         width: calc(100% - 200px);
@@ -732,7 +732,7 @@ body{
                     .hamburger{
 
                         .hamburgerImg{
-                            transition: all 1s ease;
+                            transition: all 0.5s ease;
                         }
                     }
                     .hamburgerSlider{
@@ -743,7 +743,7 @@ body{
                         z-index: 1;
                         position: absolute;
                         
-                        transition: all 1s ease;
+                        transition: width 0.5s ease-in-out;
                         display: flex;
                         align-items: center;
                         justify-content: center;
@@ -1177,7 +1177,7 @@ body{
                                 margin-left: 50px;
 
                                 p{
-                                    font-size: 18px;
+                                    font-size: 15px;
 
                                     span{
                                         font-size:18px;
@@ -1214,6 +1214,8 @@ body{
                                     
                                     .text-of-universe{
                                         height: 240px;
+                                        padding: 0;
+
 
                                         .universeInfo{
                                             width: 100%;
@@ -1270,7 +1272,15 @@ body{
                                 .left{
 
                                     .technoInnerLeft{
+                                        .ul-con{
 
+                                            .technoList {
+                                                 
+                                                li{
+                                                    margin-left: 40px;
+                                                }
+                                            }
+                                        }
                                         .technologyText{
                                             display: flex;
                                             flex-direction: column;
