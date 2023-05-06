@@ -148,6 +148,7 @@
             good.innerHTML = homeAddContent
             myfunc1()
             body.style.overflowY = "hidden"
+            main.style.height = "auto"
         }
 
         function litagClickFunction(e) {
@@ -190,9 +191,11 @@
             }else if(eve.target.id == 1){
                 body.style.backgroundImage = `url(./assets/destination/background-destination-desktop.jpg)`
                 destinationAppear()
+
             }else if(eve.target.id == 2){
                 body.style.backgroundImage = `url(./assets/crew/background-crew-mobile.jpg)`
                 good.style.marginLeft = "-200vw"
+
             }else{
                 body.style.backgroundImage = `url(./assets/technology/background-technology-mobile.jpg)`
                 technoAppear()
@@ -407,7 +410,7 @@
 
             if(i == 0){
                 optionToLaunch.textContent = `${technoData0.name}`
-                changeImageForTechno.src = `${technoData0.images.portrait}`
+                changeImageForTechno.src = `${technoData0.images.landscape}`
                 launchText.textContent =`${technoData0.description}`
                 createList.classList.add("active")
             }
@@ -435,7 +438,7 @@
 
                 }else if(e.target.id == 2){
                     optionToLaunch.textContent = `${technoData2.name}`
-                    changeImageForTechno.src = `${technoData2.images.portrait}`
+                    changeImageForTechno.src = `${technoData2.images.landscape}`
                     launchText.textContent =`${technoData2.description}`
                     createList.classList.add("active")
                     twoRemove()

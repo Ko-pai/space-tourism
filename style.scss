@@ -1,5 +1,5 @@
-        body{
-            width: 100vw;
+body{      
+             width: 100vw;
             height: 100vh;
             margin: 0;
             padding: 0;
@@ -789,6 +789,7 @@
                     header{
                         height: 100px;
                         justify-content: space-between;
+                        top: 10px;
 
                         .headerRight{
                             display: none;
@@ -823,7 +824,7 @@
             main{
                 .mainContainer{
                     width: 520vw;
-                    
+                    margin-top: 0;
                     display: flex;
                     align-items: center;
                     
@@ -832,7 +833,7 @@
                             width: 100vw;
                             height: 100vw;
                             display: block;
-                            margin-top: 20px;
+                            margin-top: 0;
                             
 
                         .homePageLeftSize{
@@ -1133,11 +1134,11 @@
         //mobile 
         @media(max-width : 390px){
             body{
-                
+                overflow-y: hidden;
                 
                 main{
+                    overflow-x: hidden;
                     
-
                     .hamburgerSlider{
                         
                         width: 0;
@@ -1156,11 +1157,12 @@
                 .mainContainer{
                     align-items: normal;
                     margin-top: 20px;
-
+                    overflow-y: scroll;
+                    height: 83vh;
 
                     .second-container{
                         margin-left: -100vw;
-                        margin-top: 80px;
+                        margin-top: 0px;
                     }
 
 

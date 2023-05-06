@@ -629,6 +629,7 @@ main .mainContainer .fifth-container .innerFifth .technologyContent .right img {
   body main header {
     height: 100px;
     justify-content: space-between;
+    top: 10px;
   }
   body main header .headerRight {
     display: none;
@@ -651,6 +652,7 @@ main .mainContainer .fifth-container .innerFifth .technologyContent .right img {
   }
   main .mainContainer {
     width: 520vw;
+    margin-top: 0;
     display: flex;
     align-items: center;
   }
@@ -658,7 +660,7 @@ main .mainContainer .fifth-container .innerFifth .technologyContent .right img {
     width: 100vw;
     height: 100vw;
     display: block;
-    margin-top: 20px;
+    margin-top: 0;
   }
   main .mainContainer .second-container .homePageLeftSize .innerLeft {
     text-align: center;
@@ -864,6 +866,12 @@ main .mainContainer .fifth-container .innerFifth .technologyContent .right img {
   }
 }
 @media (max-width: 390px) {
+  body {
+    overflow-y: hidden;
+  }
+  body main {
+    overflow-x: hidden;
+  }
   body main .hamburgerSlider {
     width: 0;
   }
@@ -873,10 +881,12 @@ main .mainContainer .fifth-container .innerFifth .technologyContent .right img {
   main .mainContainer {
     align-items: normal;
     margin-top: 20px;
+    overflow-y: scroll;
+    height: 83vh;
   }
   main .mainContainer .second-container {
     margin-left: -100vw;
-    margin-top: 80px;
+    margin-top: 0px;
   }
   main .mainContainer .third-container .innerThird {
     margin-left: 0px;
