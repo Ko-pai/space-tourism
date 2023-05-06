@@ -15,7 +15,7 @@ body{
                 height: 100%;
                 margin: 0;
                 padding: 0;
-                transition: background-image 0.5s ease;
+                transition: background-image 0.42s ease;
                 display: flex;
                 flex-direction: column;
                 
@@ -130,7 +130,7 @@ body{
                 .second-container{
                     width: 100vw;
                     height: calc(100vh - 150px);
-                    transition: margin-left 1s ease;
+                    transition: margin-left .5s ease;
                     display: flex;
                    
 
@@ -216,7 +216,7 @@ body{
                     align-items: center;
                     justify-content: center;
                     margin-left: 0px;
-                    transition: margin-left 1s ease;
+                    transition: margin-left .5s ease;
 
                     .innerThird{
                         width: 80%;
@@ -417,7 +417,7 @@ body{
                     height: calc(100vh - 150px);
                     align-items: center;
                     justify-content: center;
-                    transition: margin-left 1s ease;
+                    transition: margin-left .5s ease;
 
                     .innerFourth{
                         width: 80%;
@@ -575,7 +575,7 @@ body{
                     color: white;
                     display: flex;
                     justify-content: end;
-                    transition: margin-left 1s ease;
+                    transition: margin-left .5s ease;
 
                     .innerFifth{
                         width: calc(100% - 200px);
