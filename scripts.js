@@ -121,18 +121,16 @@
             }
         }
 
-        function technologyfunc(){
-            if(window.innerWidth < 550){
-                changeImageForTechno.src = `${technoData0.images.landscape}`
-            }else{
-                changeImageForTechno.src = `${technoData0.images.portrait}`
-            }
-        }
+        
 
 
         function callWindow (){
             window.addEventListener("load",myfunc1)
             window.addEventListener("resize",myfunc1)
+        }
+        function callWindow2 (){
+            window.addEventListener("load",technologyfunc)
+            window.addEventListener("resize",technologyfunc)
         }
         function callWindow1 (){
             window.addEventListener("load",destifunc)
@@ -210,6 +208,83 @@
         
     }   
     
+
+
+    // technology list item click function
+    function technologyLandscape(listItem,data0,data1,data2){
+        if(window.innerWidth < 960){
+            clickTechnologyLandscape(listItem,data0,data1,data2)
+            return
+        }
+    }
+
+    function clickTechnologyLandscape(listItem,data0,data1,data2){
+        listItem.addEventListener("click",(e)=>{
+                
+            
+            if(e.target.id == 0){
+                optionToLaunch.textContent = `${data0.name.toUpperCase()}`
+                changeImageForTechno.src = `${data0.images.landscape}`
+                launchText.textContent =`${data0.description}`
+                listItem.classList.add("active")
+                twoRemove()
+                threeRemove()
+
+            }else if(e.target.id == 1){
+                optionToLaunch.textContent = `${data1.name.toUpperCase()}`
+                changeImageForTechno.src = `${data1.images.landscape}`
+                launchText.textContent =`${data1.description}`
+                listItem.classList.add("active")
+                oneRemove()
+                threeRemove()
+
+            }else if(e.target.id == 2){
+                optionToLaunch.textContent = `${data2.name.toUpperCase()}`
+                changeImageForTechno.src = `${data2.images.landscape}`
+                launchText.textContent =`${data2.description}`
+                listItem.classList.add("active")
+                twoRemove()
+                oneRemove()
+            }
+
+            
+        })
+    }
+
+
+    function clickTechnologyPortrait(listItem,data0,data1,data2){
+        listItem.addEventListener("click",(e)=>{
+                
+            
+            if(e.target.id == 0){
+                optionToLaunch.textContent = `${data0.name.toUpperCase()}`
+                changeImageForTechno.src = `${data0.images.portrait}`
+                launchText.textContent =`${data0.description}`
+                listItem.classList.add("active")
+                twoRemove()
+                threeRemove()
+
+            }else if(e.target.id == 1){
+                optionToLaunch.textContent = `${data1.name.toUpperCase()}`
+                changeImageForTechno.src = `${data1.images.portrait}`
+                launchText.textContent =`${data1.description}`
+                listItem.classList.add("active")
+                oneRemove()
+                threeRemove()
+
+            }else if(e.target.id == 2){
+                optionToLaunch.textContent = `${data2.name.toUpperCase()}`
+                changeImageForTechno.src = `${data2.images.portrait}`
+                launchText.textContent =`${data2.description}`
+                listItem.classList.add("active")
+                twoRemove()
+                oneRemove()
+            }
+
+            
+        })
+    }
+
     
     //this variable is for Destination */
     const universeList = ["MOON","MARS","EUROPA","TITAN"]
@@ -239,7 +314,7 @@
     const changeImageForTechno = document.querySelector(".changeTechnoImage")
 
 
-    // This ASYNC Function is for fetch data from data.json and add content of destination,crew,trechnology
+    // This ASYNC Function is for fetch data from data.json and add content to destination,crew,trechnology
     takeData()
     async function takeData(){
         const response = await fetch(url)
@@ -361,7 +436,7 @@
                     crewName.textContent = `${crewData0.name}`
                     crewBio.textContent =`${crewData0.bio}`
                     crewImage.src = `${crewData0.images.webp}`
-                    crewImage.style.width = "80%"
+                    crewImage.style.width = "70%"
                     crewName.style.fontSize = "34px"
                 }else if(active == 1) {
                     
@@ -369,14 +444,14 @@
                     crewName.textContent = `${crewData1.name}`
                     crewBio.textContent =`${crewData1.bio}`
                     crewImage.src = `${crewData1.images.webp}`
-                    crewImage.style.width = "80%"
+                    crewImage.style.width = "70%"
                     crewName.style.fontSize = "28px"
                 }else if(active == 2) {
                     crewPosition.textContent = `${crewData2.role}`
                     crewName.textContent = `${crewData2.name}`
                     crewBio.textContent =`${crewData2.bio}`
                     crewImage.src = `${crewData2.images.webp}`
-                    crewImage.style.width = "80%"
+                    crewImage.style.width = "70%"
                     crewName.style.fontSize = "34px"
 
                 }else if(active == 3) {
@@ -385,7 +460,7 @@
                     crewName.textContent = `${crewData3.name}`
                     crewBio.textContent =`${crewData3.bio}`
                     crewImage.src = `${crewData3.images.webp}`
-                    crewImage.style.width = "90%"
+                    crewImage.style.width = "70%"
                     crewName.style.fontSize = "34px"
                     
                 }
@@ -414,39 +489,19 @@
                 launchText.textContent =`${technoData0.description}`
                 createList.classList.add("active")
             }
+
+            if(window.innerWidth > 960){
+                clickTechnologyPortrait(createList,technoData0,technoData1,technoData2)
+            }else if(window.innerWidth < 960){
+                clickTechnologyLandscape(createList,technoData0,technoData1,technoData2)
+            }
+           
             
-            createList.addEventListener("click",(e)=>{
-                
+             //window.addEventListener("resize",clickTechnologyLandscape(createList,technoData0,technoData1,technoData2))
+            //window.addEventListener("resize",clickTechnologyPortrait(createList,technoData0,technoData1,technoData2))
             
-                if(e.target.id == 0){
-                    optionToLaunch.textContent = `${technoData0.name.toUpperCase()}`
-                    changeImageForTechno.src = `${technoData0.images.portrait}`
-                    launchText.textContent =`${technoData0.description}`
-                    createList.classList.add("active")
-                    
-                    twoRemove()
-                    threeRemove()
-                    
-
-                }else if(e.target.id == 1){
-                    optionToLaunch.textContent = `${technoData1.name.toUpperCase()}`
-                    changeImageForTechno.src = `${technoData1.images.portrait}`
-                    launchText.textContent =`${technoData1.description}`
-                    createList.classList.add("active")
-                    oneRemove()
-                    threeRemove()
-
-                }else if(e.target.id == 2){
-                    optionToLaunch.textContent = `${technoData2.name.toUpperCase()}`
-                    changeImageForTechno.src = `${technoData2.images.portrait}`
-                    launchText.textContent =`${technoData2.description}`
-                    createList.classList.add("active")
-                    twoRemove()
-                    oneRemove()
-                }
-
-                
-            })
+           
+           
         }
     }
 
