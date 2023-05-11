@@ -145,7 +145,7 @@
             good.style.backgroundColor = "transparent"
             good.innerHTML = homeAddContent
             myfunc1()
-            body.style.overflowY = "hidden"
+            body.style.overflow = "hidden"
             main.style.height = "auto"
         }
 

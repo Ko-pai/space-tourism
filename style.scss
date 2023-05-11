@@ -1031,7 +1031,8 @@ body{
 
 
                             .pickTechnology{
-                                margin-left: 24%;
+                                margin-left: 17%;
+                                width: 70%;
                             }
 
                             .technologyContent{
@@ -1099,7 +1100,7 @@ body{
         }
 
 
-        @media(max-width : 960px){
+        @media(max-width : 1200px){
             body{
                 
 
@@ -1262,7 +1263,7 @@ body{
                     .third-container{
                         width: 100vw;
                         height: 100vh;
-                        justify-content: inherit;
+                        justify-content: center;
                         margin-top: 50px;
 
 
@@ -1270,7 +1271,7 @@ body{
 
                            align-items: normal;
                             justify-content: unset;
-                            margin-left: 50px;
+                           
 
                            .pickDestination{
                                 height: 70px;
@@ -1305,14 +1306,14 @@ body{
                                     .universePhoto{
                                         width: 160px;
                                         height: 160px;
-                                        margin-left: -100px;
+                                        margin-left: -180px;
                                     }
                                 }
 
                                 .innerDestinatinRightSide{
                                     .list-of-universe{
                                         width: 50%;
-                                        margin-right: 100px;
+                                       
 
                                         .universeListSlider{
                                             height: 3px;
@@ -1392,7 +1393,7 @@ body{
                                        margin-left: 90px;
                                        margin-top: 50px;
                                        margin-bottom: 100px;
-                                       width: 40%;
+                                       width: 30%;
                                     }
                                     .crewTextBox{
                                         text-align: center;
@@ -1432,11 +1433,11 @@ body{
                        
                         .innerFifth{
                             width: 100vw;
-                            height: 180vh;
+                            height: 130vh;
 
                             .pickTechnology{
-                                margin-left: 24%;
-                                width: 50%;
+                                margin-left: 17%;
+                                width: 63%;
                                 justify-content: center;
                             }
 
@@ -1503,20 +1504,28 @@ body{
 
         
         }
-        @media(max-width : 1200px){
+
+        @media(max-width : 1300px){
             body{
-               
-                overflow-y: hidden;
+                overflow: hidden;
                 main{
                     width: 100vw;
                     height: 100vh;
-                   
+                    overflow: hidden;
+
+                    header{
+                        .middleLine{
+                            display: none;
+                        }
+                    }
                 }
             }
 
             main{
                 .mainContainer{
-
+                    overflow-x: hidden;
+                    
+                    
                     .third-container{
 
                         .innerThird{
@@ -1537,6 +1546,7 @@ body{
                 }
             }
         }
+        
         //mobile 
         @media(max-width : 390px){
             body{
@@ -1603,6 +1613,8 @@ body{
                                     .list-of-universe{
                                         margin-right: 0;
                                         width: 80%;
+
+                                        
                                         margin-left: 10px;
                                         .destinationUL {
                                             
@@ -1654,6 +1666,7 @@ body{
                                         margin-left: 30px;
                                         margin-bottom: 30px;
                                         margin-top: 40px;
+                                        width: 50%;
                                     }
                                     .crewTextBox{
                                         width: 100%;

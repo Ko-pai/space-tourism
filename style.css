@@ -811,7 +811,8 @@ main .mainContainer .fifth-container .innerFifth .technologyContent .right img {
     width: 100vw;
   }
   main .mainContainer .fifth-container .innerFifth .pickTechnology {
-    margin-left: 24%;
+    margin-left: 17%;
+    width: 70%;
   }
   main .mainContainer .fifth-container .innerFifth .technologyContent {
     flex-direction: column;
@@ -851,7 +852,7 @@ main .mainContainer .fifth-container .innerFifth .technologyContent .right img {
     margin-left: 60px;
   }
 }
-@media (max-width: 960px) {
+@media (max-width: 1200px) {
   body main::-webkit-scrollbar {
     display: none;
   }
@@ -981,13 +982,12 @@ main .mainContainer .fifth-container .innerFifth .technologyContent .right img {
   main .mainContainer .third-container {
     width: 100vw;
     height: 100vh;
-    justify-content: inherit;
+    justify-content: center;
     margin-top: 50px;
   }
   main .mainContainer .third-container .innerThird {
     align-items: normal;
     justify-content: unset;
-    margin-left: 50px;
   }
   main .mainContainer .third-container .innerThird .pickDestination {
     height: 70px;
@@ -1016,11 +1016,10 @@ main .mainContainer .fifth-container .innerFifth .technologyContent .right img {
   main .mainContainer .third-container .innerThird .destination .innerDestinatinLeftSide .universePhoto {
     width: 160px;
     height: 160px;
-    margin-left: -100px;
+    margin-left: -180px;
   }
   main .mainContainer .third-container .innerThird .destination .innerDestinatinRightSide .list-of-universe {
     width: 50%;
-    margin-right: 100px;
   }
   main .mainContainer .third-container .innerThird .destination .innerDestinatinRightSide .list-of-universe .universeListSlider {
     height: 3px;
@@ -1079,7 +1078,7 @@ main .mainContainer .fifth-container .innerFifth .technologyContent .right img {
     margin-left: 90px;
     margin-top: 50px;
     margin-bottom: 100px;
-    width: 40%;
+    width: 30%;
   }
   main .mainContainer .fourth-container .innerFourth .crew .innerCrewleftSide .crewTextBox {
     text-align: center;
@@ -1107,11 +1106,11 @@ main .mainContainer .fifth-container .innerFifth .technologyContent .right img {
   }
   main .mainContainer .fifth-container .innerFifth {
     width: 100vw;
-    height: 180vh;
+    height: 130vh;
   }
   main .mainContainer .fifth-container .innerFifth .pickTechnology {
-    margin-left: 24%;
-    width: 50%;
+    margin-left: 17%;
+    width: 63%;
     justify-content: center;
   }
   main .mainContainer .fifth-container .innerFifth .technologyContent {
@@ -1152,13 +1151,20 @@ main .mainContainer .fifth-container .innerFifth .technologyContent .right img {
     margin-left: 60px;
   }
 }
-@media (max-width: 1200px) {
+@media (max-width: 1300px) {
   body {
-    overflow-y: hidden;
+    overflow: hidden;
   }
   body main {
     width: 100vw;
     height: 100vh;
+    overflow: hidden;
+  }
+  body main header .middleLine {
+    display: none;
+  }
+  main .mainContainer {
+    overflow-x: hidden;
   }
   main .mainContainer .third-container .innerThird .destination .innerDestinatinRightSide {
     justify-content: center;
@@ -1239,6 +1245,7 @@ main .mainContainer .fifth-container .innerFifth .technologyContent .right img {
     margin-left: 30px;
     margin-bottom: 30px;
     margin-top: 40px;
+    width: 50%;
   }
   main .mainContainer .fourth-container .innerFourth .crew .innerCrewleftSide .crewTextBox {
     width: 100%;
