@@ -1267,6 +1267,12 @@ main .mainContainer .fifth-container .innerFifth .technologyContent .right img {
     margin-left: 12%;
     width: 80%;
   }
+  main .mainContainer .fifth-container .innerFifth .pickTechnology p {
+    font-size: 19px;
+  }
+  main .mainContainer .fifth-container .innerFifth .pickTechnology p span {
+    font-size: 19px;
+  }
   main .mainContainer .fifth-container .innerFifth .technologyContent .left .technoInnerLeft .ul-con .technoList li {
     margin-left: 40px;
   }
