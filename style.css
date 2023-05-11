@@ -1056,7 +1056,7 @@ main .mainContainer .fifth-container .innerFifth .technologyContent .right img {
   }
   main .mainContainer .second-container {
     width: 100vw;
-    height: 100vh;
+    height: 60vh;
     display: block;
     margin-top: 0;
   }
@@ -1095,7 +1095,7 @@ main .mainContainer .fifth-container .innerFifth .technologyContent .right img {
   }
   main .mainContainer .third-container {
     width: 100vw;
-    height: 100vh;
+    height: 60vh;
     justify-content: center;
     margin-top: 50px;
   }
