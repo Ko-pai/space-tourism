@@ -283,43 +283,53 @@ body{
                                 align-items: center;
 
 
-                                .list-of-universe{
-                                    width: 90%;
-                                    height: 80px;
+                                .universeNameContainer{
                                     
                                     display: flex;
-                                    flex-direction: column;
-                                    position: relative;
-
-                                    .universeListSlider{
-                                        height: 5px;
-                                        background-color:white;
-                                        position: absolute;
-                                        top: 60px;
-                                        transition: all 1s ease;
-                                        border-radius: 10px;
-                                    }
+                                    align-items: center;
+                                    justify-content: center;
+                                    width: 100%;
+                                    height: 80px;
                                     
-                                    .destinationUL{
-                                        width: 100%;
+                                    .list-of-universe{
+                                        width: 90%;
                                         height: 80px;
-                                        display: flex;
-                                        margin: 0;
-                                        padding: 0;
-                                        align-items: center;
                                         
-
-                                        li{
-                                            margin-right: 20px;
-                                            list-style: none;
-                                            font-family: 'Barlow Condensed', sans-serif;
-                                            font-size: 20px;
-                                            color: white;
-                                            letter-spacing: 4px;
-                                            user-select: none;
-                                            cursor: pointer;
+                                        display: flex;
+                                        flex-direction: column;
+                                        position: relative;
+    
+                                        .universeListSlider{
+                                            height: 5px;
+                                            background-color:white;
+                                            position: absolute;
+                                            top: 60px;
+                                            transition: all 1s ease;
+                                            border-radius: 10px;
+                                        }
+                                        
+                                        .destinationUL{
+                                            width: 100%;
+                                            height: 80px;
+                                            display: flex;
+                                            margin: 0;
+                                            padding: 0;
+                                            align-items: center;
+                                            
+    
+                                            li{
+                                                margin-right: 20px;
+                                                list-style: none;
+                                                font-family: 'Barlow Condensed', sans-serif;
+                                                font-size: 20px;
+                                                color: white;
+                                                letter-spacing: 4px;
+                                                user-select: none;
+                                                cursor: pointer;
+                                            }
                                         }
                                     }
+
                                 }
 
                                 .text-of-universe{
@@ -719,6 +729,7 @@ body{
 
 
         /* Responsive Style */
+        /*
         @media(max-width : 560px){
             body{
                 
@@ -891,6 +902,14 @@ body{
                            .pickDestination{
                                 height: 70px;
                                 margin-left: 20px;
+
+                                p{
+                                    font-size: 18px;
+
+                                    span{
+                                        font-size: 18px;
+                                    }
+                                }
                            }
 
                             .destination{
@@ -1098,9 +1117,9 @@ body{
 
         
         }
+*/
 
-
-        @media(max-width : 1200px){
+        @media(max-width : 1050px){
             body{
                 
 
@@ -1311,22 +1330,29 @@ body{
                                 }
 
                                 .innerDestinatinRightSide{
-                                    .list-of-universe{
-                                        width: 50%;
-                                       
 
-                                        .universeListSlider{
-                                            height: 3px;
-                                        }
-                                        .destinationUL{
+                                    .universeNameContainer{
 
-                                            
-                                            li{
-                                                margin-right: 25px;
+
+                                        .list-of-universe{
+                                            width: 100%;
+                                           
+    
+                                            .universeListSlider{
+                                                height: 3px;
+                                            }
+                                            .destinationUL{
+    
+                                                
+                                                li{
+                                                    margin-right: 25px;
+                                                }
                                             }
                                         }
+    
                                     }
 
+                                    
 
 
                                     .text-of-universe{
@@ -1504,6 +1530,90 @@ body{
 
         
         }
+
+@media(max-width : 560px){
+
+
+    main{
+
+        .mainContainer{
+
+            .third-container{
+
+                .innerThird{
+
+                    .pickDestination{
+
+                        p{
+                            font-size: 19px;
+
+                            span{
+                                font-size: 19px;
+                            }
+                        }
+                    }
+                    .destination{
+                        .innerDestinatinLeftSide{
+                            margin-left: 50px;
+
+                        }
+
+
+                        .innerDestinatinRightSide{
+
+                            .universeNameContainer{
+                                width: 90%;
+                            }
+
+                            .distance-of-universe{
+                                width: 100%;
+                            }
+                            .text-of-universe{
+                                width: 100%;
+                                padding-left: 40px;
+                                margin-top: 20px;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .fourth-container{
+
+                .innerFourth{
+
+                    .crew{
+
+                        .innerCrewleftSide{
+
+                            .crewSlider{
+                                margin-left: 0px;
+                                
+                            }
+                        }
+                    }
+                }
+            }
+
+            .fifth-container{
+
+                .innerFifth{
+
+                    .pickTechnology{
+                        width: 70%;
+                        p{
+                            font-size: 21px;
+                            span{
+                                font-size: 21px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
 
         @media(max-width : 1300px){
             body{

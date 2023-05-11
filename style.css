@@ -229,14 +229,21 @@ main .mainContainer .third-container .innerThird .destination .innerDestinatinRi
   flex-direction: column;
   align-items: center;
 }
-main .mainContainer .third-container .innerThird .destination .innerDestinatinRightSide .list-of-universe {
+main .mainContainer .third-container .innerThird .destination .innerDestinatinRightSide .universeNameContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 80px;
+}
+main .mainContainer .third-container .innerThird .destination .innerDestinatinRightSide .universeNameContainer .list-of-universe {
   width: 90%;
   height: 80px;
   display: flex;
   flex-direction: column;
   position: relative;
 }
-main .mainContainer .third-container .innerThird .destination .innerDestinatinRightSide .list-of-universe .universeListSlider {
+main .mainContainer .third-container .innerThird .destination .innerDestinatinRightSide .universeNameContainer .list-of-universe .universeListSlider {
   height: 5px;
   background-color: white;
   position: absolute;
@@ -244,7 +251,7 @@ main .mainContainer .third-container .innerThird .destination .innerDestinatinRi
   transition: all 1s ease;
   border-radius: 10px;
 }
-main .mainContainer .third-container .innerThird .destination .innerDestinatinRightSide .list-of-universe .destinationUL {
+main .mainContainer .third-container .innerThird .destination .innerDestinatinRightSide .universeNameContainer .list-of-universe .destinationUL {
   width: 100%;
   height: 80px;
   display: flex;
@@ -252,7 +259,7 @@ main .mainContainer .third-container .innerThird .destination .innerDestinatinRi
   padding: 0;
   align-items: center;
 }
-main .mainContainer .third-container .innerThird .destination .innerDestinatinRightSide .list-of-universe .destinationUL li {
+main .mainContainer .third-container .innerThird .destination .innerDestinatinRightSide .universeNameContainer .list-of-universe .destinationUL li {
   margin-right: 20px;
   list-style: none;
   font-family: "Barlow Condensed", sans-serif;
@@ -570,289 +577,396 @@ main .mainContainer .fifth-container .innerFifth .technologyContent .right img {
 }
 
 /* Responsive Style */
-@media (max-width: 560px) {
-  body main {
-    overflow-x: hidden;
-  }
-  body main::-webkit-scrollbar {
-    display: none;
-  }
-  body main .hamburger .hamburgerImg {
-    transition: all 0.5s ease;
-  }
-  body main .hamburgerSlider {
-    width: 0;
-    height: 100vh;
-    background: linear-gradient(to bottom, hsla(0, 9%, 98%, 0.05), hsla(0, 6%, 87%, 0.171), hsla(0, 9%, 98%, 0.05));
-    -webkit-backdrop-filter: blur(10px);
-            backdrop-filter: blur(10px);
-    z-index: 1;
-    position: absolute;
-    transition: width 0.5s ease-in-out;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  body main .hamburgerSlider .hamULContainer {
-    width: 100%;
-    height: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  body main .hamburgerSlider .hamULContainer ul {
-    color: white;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-left: -20px;
-    opacity: 0;
-  }
-  body main .hamburgerSlider .hamULContainer ul li {
-    list-style: none;
-    margin-bottom: 50px;
-    font-size: 25px;
-    font-family: "Barlow Condensed", sans-serif;
-    transition: all 0.5s ease;
-    -webkit-user-select: none;
-       -moz-user-select: none;
-            user-select: none;
-    cursor: pointer;
-  }
-  body main .hamburgerSlider .hamULContainer ul li:hover {
-    transform: scale(1.5);
-    border-bottom: 4px dotted rgb(112, 174, 199);
-  }
-  body main .slideDiv {
-    width: 80vw;
-  }
-  body main header {
-    height: 100px;
-    justify-content: space-between;
-    top: 10px;
-  }
-  body main header .headerRight {
-    display: none;
-  }
-  body main header .hamburger {
-    width: 30px;
-    height: 30px;
-    display: inline-flex;
-    margin-right: 40px;
-    position: absolute;
-    right: 0;
-    z-index: 3;
-  }
-  body main header .headerLeft {
-    width: 50px;
-    height: 50px;
-  }
-  body main header .middleLine {
-    display: none;
-  }
-  main .mainContainer {
-    width: 520vw;
-    margin-top: 0;
-    display: flex;
-    align-items: center;
-  }
-  main .mainContainer .second-container {
-    width: 100vw;
-    height: 100vw;
-    display: block;
-    margin-top: 0;
-  }
-  main .mainContainer .second-container .homePageLeftSize .innerLeft {
-    text-align: center;
-  }
-  main .mainContainer .second-container .homePageLeftSize .innerLeft h1 {
-    font-size: 70px;
-    margin-bottom: 10px;
-    margin: 0;
-    padding: 0;
-  }
-  main .mainContainer .second-container .homePageLeftSize .innerLeft .pText0 {
-    font-size: 18px;
-    letter-spacing: 3px;
-    color: rgba(173, 168, 168, 0.719);
-  }
-  main .mainContainer .second-container .homePageLeftSize .innerLeft .pText {
-    margin: 0;
-    width: 340px;
-    height: 100px;
-    font-size: 15px;
-    font-family: "Roboto", sans-serif;
-  }
-  main .mainContainer .second-container .homePageRightSize {
-    flex: 3;
-    -webkit-user-select: none;
-       -moz-user-select: none;
-            user-select: none;
-  }
-  main .mainContainer .second-container .homePageRightSize .circle {
-    width: 150px;
-    height: 150px;
-    font-size: 25px;
-    cursor: pointer;
-  }
-  main .mainContainer .third-container {
-    width: 100vw;
-    height: 100vh;
-    justify-content: inherit;
-    margin-top: 50px;
-  }
-  main .mainContainer .third-container .innerThird {
-    align-items: normal;
-    justify-content: unset;
-    margin-left: 50px;
-  }
-  main .mainContainer .third-container .innerThird .pickDestination {
-    height: 70px;
-    margin-left: 20px;
-  }
-  main .mainContainer .third-container .innerThird .destination {
-    width: 100vw;
-    height: 100vw;
-    flex-direction: column;
-  }
-  main .mainContainer .third-container .innerThird .destination .innerDestinatinLeftSide {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  main .mainContainer .third-container .innerThird .destination .innerDestinatinLeftSide .universePhoto {
-    width: 160px;
-    height: 160px;
-    margin-left: -100px;
-  }
-  main .mainContainer .third-container .innerThird .destination .innerDestinatinRightSide .list-of-universe {
-    width: 80%;
-    margin-right: 100px;
-  }
-  main .mainContainer .third-container .innerThird .destination .innerDestinatinRightSide .list-of-universe .universeListSlider {
-    height: 3px;
-  }
-  main .mainContainer .third-container .innerThird .destination .innerDestinatinRightSide .list-of-universe .destinationUL li {
-    margin-right: 35px;
-  }
-  main .mainContainer .third-container .innerThird .destination .innerDestinatinRightSide .text-of-universe {
-    padding-left: 20px;
-  }
-  main .mainContainer .third-container .innerThird .destination .innerDestinatinRightSide .text-of-universe .universeInfo {
-    align-items: center;
-  }
-  main .mainContainer .third-container .innerThird .destination .innerDestinatinRightSide .text-of-universe .universeInfo span {
-    font-size: 60px;
-    text-align: center;
-  }
-  main .mainContainer .third-container .innerThird .destination .innerDestinatinRightSide .text-of-universe .universeInfo p {
-    width: 270px;
-    height: 50px;
-    text-align: center;
-    text-overflow: unset;
-  }
-  main .mainContainer .third-container .innerThird .destination .innerDestinatinRightSide .distance-of-universe {
-    height: 70px;
-  }
-  main .mainContainer .third-container .innerThird .destination .innerDestinatinRightSide .distance-of-universe .avg_Distance {
-    flex: 2;
-    margin-left: 10px;
-  }
-  main .mainContainer .third-container .innerThird .destination .innerDestinatinRightSide .distance-of-universe .travelTime {
-    flex: 2;
-  }
-  main .mainContainer .fourth-container {
-    width: 100vw;
-    height: 100vh;
-  }
-  main .mainContainer .fourth-container .innerFourth .pickCrew {
-    justify-content: center;
-    display: flex;
-    align-items: center;
-  }
-  main .mainContainer .fourth-container .innerFourth .crew {
-    display: flex;
-    flex-direction: column;
-  }
-  main .mainContainer .fourth-container .innerFourth .crew .innerCrewleftSide {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  main .mainContainer .fourth-container .innerFourth .crew .innerCrewleftSide .crewSlider {
-    margin-left: 90px;
-  }
-  main .mainContainer .fourth-container .innerFourth .crew .innerCrewleftSide .crewTextBox {
-    text-align: center;
-  }
-  main .mainContainer .fourth-container .innerFourth .crew .innerCrewleftSide .crewTextBox span {
-    font-size: 23px;
-    margin-bottom: 30px;
-  }
-  main .mainContainer .fourth-container .innerFourth .crew .innerCrewleftSide .crewTextBox h1 {
-    font-size: 34px;
-    margin-bottom: 20px;
-  }
-  main .mainContainer .fourth-container .innerFourth .crew .innerCrewleftSide .crewTextBox p {
-    width: 360px;
-    text-align: center;
-  }
-  main .mainContainer .fourth-container .innerFourth .crew .innerCrewleftSide .crewSlider {
-    position: relative;
-  }
-  main .mainContainer .fourth-container .innerFourth .crew .innerCrewRightSide .crewImage {
-    width: 100%;
-    height: auto;
-    top: 0px;
-  }
-  main .mainContainer .fifth-container .innerFifth {
-    width: 100vw;
-  }
-  main .mainContainer .fifth-container .innerFifth .pickTechnology {
-    margin-left: 17%;
-    width: 70%;
-  }
-  main .mainContainer .fifth-container .innerFifth .technologyContent {
-    flex-direction: column;
-  }
-  main .mainContainer .fifth-container .innerFifth .technologyContent .right img {
-    width: 100%;
-    height: auto;
-  }
-  main .mainContainer .fifth-container .innerFifth .technologyContent .left .technoInnerLeft {
-    flex-direction: column;
-  }
-  main .mainContainer .fifth-container .innerFifth .technologyContent .left .technoInnerLeft .technologyText {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  main .mainContainer .fifth-container .innerFifth .technologyContent .left .technoInnerLeft .technologyText .theTechnology {
-    margin-left: 70px;
-  }
-  main .mainContainer .fifth-container .innerFifth .technologyContent .left .technoInnerLeft .technologyText .option {
-    margin-top: 20px;
-    margin-left: 50px;
-    font-size: 38px;
-  }
-  main .mainContainer .fifth-container .innerFifth .technologyContent .left .technoInnerLeft .technologyText .launchText {
-    width: 70%;
-    font-size: 15px;
-    text-align: center;
-    margin-left: 50px;
-  }
-  main .mainContainer .fifth-container .innerFifth .technologyContent .left .technoInnerLeft .ul-con .technoList {
-    width: 100%;
-    flex-direction: row;
-    margin-top: 30px;
-  }
-  main .mainContainer .fifth-container .innerFifth .technologyContent .left .technoInnerLeft .ul-con .technoList li {
-    margin-left: 60px;
-  }
-}
-@media (max-width: 1200px) {
+/*
+        @media(max-width : 560px){
+            body{
+
+
+                main{
+
+                    overflow-x: hidden;
+                    &::-webkit-scrollbar{
+                        display: none;
+                    }
+                    .hamburger{
+
+                        .hamburgerImg{
+                            transition: all 0.5s ease;
+                        }
+                    }
+                    .hamburgerSlider{
+                        width: 0;
+                        height: 100vh;
+                        background: linear-gradient(to bottom,hsla(0, 9%, 98%, 0.05),hsla(0, 6%, 87%, 0.171),hsla(0, 9%, 98%, 0.05));
+                        backdrop-filter: blur(10px);
+                        z-index: 1;
+                        position: absolute;
+
+                        transition: width 0.5s ease-in-out;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+
+
+                        .hamULContainer{
+                            width: 100%;
+                            height: 50%;
+
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            ul{
+                                color: white;
+                                display: flex;
+                                flex-direction: column;
+                                align-items: center;
+                                justify-content: center;
+                                margin-left: -20px;
+                                opacity: 0;
+                                li{
+                                    list-style: none;
+                                    margin-bottom: 50px;
+                                    font-size: 25px;
+                                    font-family: 'Barlow Condensed', sans-serif;
+                                    transition: all 0.5s ease;
+                                    user-select: none;
+                                    cursor: pointer;
+
+                                    &:hover{
+                                        transform: scale(1.5);
+                                        border-bottom: 4px dotted  rgb(112, 174, 199);
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .slideDiv{
+                        width: 80vw;
+                    }
+
+                    header{
+                        height: 100px;
+                        justify-content: space-between;
+                        top: 10px;
+
+                        .headerRight{
+                            display: none;
+                        }
+
+                        .hamburger{
+                            width: 30px;
+                            height: 30px;
+                            display: inline-flex;
+                            margin-right: 40px;
+                            position: absolute;
+                            right: 0;
+                            z-index: 3;
+                        }
+                        .headerLeft{
+                            width: 50px;
+                            height: 50px;
+                        }
+
+
+                        .middleLine{
+                            display: none;
+                        }
+                    }
+                }
+
+
+            }
+
+
+
+            main{
+                .mainContainer{
+                    width: 520vw;
+                    margin-top: 0;
+                    display: flex;
+                    align-items: center;
+
+
+                    .second-container{
+                            width: 100vw;
+                            height: 100vw;
+                            display: block;
+                            margin-top: 0;
+
+
+                        .homePageLeftSize{
+
+                            .innerLeft{
+                                text-align: center;
+
+                                h1{
+                                    font-size: 70px;
+                                    margin-bottom: 10px;
+                                    margin: 0;
+                                    padding: 0;
+                                }
+                                .pText0{
+                                    font-size: 18px;
+                                    letter-spacing: 3px;
+                                    color: rgba(173, 168, 168, 0.719);
+                                }
+
+                                .pText{
+                                    margin: 0;
+
+                                    width: 340px;
+                                    height: 100px;
+                                    font-size: 15px;
+                                    font-family: 'Roboto', sans-serif;
+                                }
+
+                            }
+                        }
+
+                        .homePageRightSize{
+                                flex: 3;
+                                user-select: none;
+                            .circle{
+                                width: 150px;
+                                height: 150px;
+                                font-size: 25px;
+                                cursor: pointer;
+
+                            }
+                        }
+                    }
+
+                    .third-container{
+                        width: 100vw;
+                        height: 100vh;
+                        justify-content: inherit;
+                        margin-top: 50px;
+                        .innerThird{
+                           align-items: normal;
+                            justify-content: unset;
+                            margin-left: 50px;
+
+                           .pickDestination{
+                                height: 70px;
+                                margin-left: 20px;
+
+                                p{
+                                    font-size: 18px;
+
+                                    span{
+                                        font-size: 18px;
+                                    }
+                                }
+                           }
+
+                            .destination{
+                                width: 100vw;
+                                height: 100vw;
+                                flex-direction: column;
+
+
+                                .innerDestinatinLeftSide{
+                                    width: 100%;
+
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+
+
+                                    .universePhoto{
+                                        width: 160px;
+                                        height: 160px;
+                                        margin-left: -100px;
+                                    }
+                                }
+
+                                .innerDestinatinRightSide{
+                                    .list-of-universe{
+                                        width: 80%;
+                                        margin-right: 100px;
+
+                                        .universeListSlider{
+                                            height: 3px;
+                                        }
+                                        .destinationUL{
+
+
+                                            li{
+                                                margin-right: 35px;
+                                            }
+                                        }
+                                    }
+
+
+
+                                    .text-of-universe{
+                                        padding-left: 20px;
+                                        .universeInfo{
+                                            align-items: center;
+
+                                            span{
+                                                font-size: 60px;
+                                                text-align: center;
+                                            }
+                                            p{
+                                                width: 270px;
+                                                height: 50px;
+                                                text-align: center;
+                                                text-overflow: unset;
+                                            }
+                                        }
+                                    }
+                                    .distance-of-universe{
+                                        height: 70px;
+
+                                        .avg_Distance{
+                                            flex: 2;
+                                            margin-left: 10px;
+                                        }
+
+                                        .travelTime{
+                                            flex: 2;
+                                        }
+
+                                    }
+
+                                }
+                            }
+                        }
+                    }
+
+                    .fourth-container{
+                        width: 100vw;
+                        height: 100vh;
+
+                        .innerFourth{
+                            .pickCrew{
+                                justify-content: center;
+                                display: flex;
+                                align-items: center;
+                            }
+                            .crew{
+                                display: flex;
+                                flex-direction: column;
+
+                                .innerCrewleftSide{
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+
+                                    .crewSlider{
+                                       margin-left: 90px;
+                                    }
+                                    .crewTextBox{
+                                        text-align: center;
+                                        span{
+                                            font-size: 23px;
+                                            margin-bottom: 30px;
+                                        }
+                                        h1{
+                                            font-size: 34px;
+                                             margin-bottom: 20px;
+                                        }
+                                        p{
+                                            width: 360px;
+                                            text-align: center;
+                                        }
+                                    }
+                                    .crewSlider{
+                                        position: relative;
+                                    }
+                                }
+                                .innerCrewRightSide{
+
+                                    .crewImage{
+                                        width: 100%;
+                                        height: auto;
+
+                                        top: 0px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+
+                    .fifth-container{
+
+                        .innerFifth{
+                            width: 100vw;
+
+
+                            .pickTechnology{
+                                margin-left: 17%;
+                                width: 70%;
+                            }
+
+                            .technologyContent{
+                                flex-direction: column;
+
+                                .right{
+
+                                    img{
+                                        width: 100%;
+                                        height: auto;
+
+                                    }
+                                }
+
+                                .left{
+
+                                    .technoInnerLeft{
+                                        flex-direction: column;
+
+                                        .technologyText{
+                                            display: flex;
+                                            flex-direction: column;
+                                            align-items: center;
+
+                                            .theTechnology{
+                                                margin-left: 70px;
+                                            }
+
+                                            .option{
+                                                margin-top: 20px;
+                                                margin-left: 50px;
+                                                font-size: 38px;
+                                            }
+                                            .launchText{
+                                                width: 70%;
+
+                                                font-size: 15px;
+                                                text-align: center;
+                                                margin-left: 50px;
+                                            }
+                                        }
+
+                                        .ul-con{
+
+                                            .technoList{
+                                                width: 100%;
+                                                flex-direction: row;
+                                                margin-top: 30px;
+
+                                                li{
+                                                    margin-left: 60px;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+            }
+
+
+        }
+*/
+@media (max-width: 1050px) {
   body main::-webkit-scrollbar {
     display: none;
   }
@@ -1018,13 +1132,13 @@ main .mainContainer .fifth-container .innerFifth .technologyContent .right img {
     height: 160px;
     margin-left: -180px;
   }
-  main .mainContainer .third-container .innerThird .destination .innerDestinatinRightSide .list-of-universe {
-    width: 50%;
+  main .mainContainer .third-container .innerThird .destination .innerDestinatinRightSide .universeNameContainer .list-of-universe {
+    width: 100%;
   }
-  main .mainContainer .third-container .innerThird .destination .innerDestinatinRightSide .list-of-universe .universeListSlider {
+  main .mainContainer .third-container .innerThird .destination .innerDestinatinRightSide .universeNameContainer .list-of-universe .universeListSlider {
     height: 3px;
   }
-  main .mainContainer .third-container .innerThird .destination .innerDestinatinRightSide .list-of-universe .destinationUL li {
+  main .mainContainer .third-container .innerThird .destination .innerDestinatinRightSide .universeNameContainer .list-of-universe .destinationUL li {
     margin-right: 25px;
   }
   main .mainContainer .third-container .innerThird .destination .innerDestinatinRightSide .text-of-universe {
@@ -1149,6 +1263,40 @@ main .mainContainer .fifth-container .innerFifth .technologyContent .right img {
   }
   main .mainContainer .fifth-container .innerFifth .technologyContent .left .technoInnerLeft .ul-con .technoList li {
     margin-left: 60px;
+  }
+}
+@media (max-width: 560px) {
+  main .mainContainer .third-container .innerThird .pickDestination p {
+    font-size: 19px;
+  }
+  main .mainContainer .third-container .innerThird .pickDestination p span {
+    font-size: 19px;
+  }
+  main .mainContainer .third-container .innerThird .destination .innerDestinatinLeftSide {
+    margin-left: 50px;
+  }
+  main .mainContainer .third-container .innerThird .destination .innerDestinatinRightSide .universeNameContainer {
+    width: 90%;
+  }
+  main .mainContainer .third-container .innerThird .destination .innerDestinatinRightSide .distance-of-universe {
+    width: 100%;
+  }
+  main .mainContainer .third-container .innerThird .destination .innerDestinatinRightSide .text-of-universe {
+    width: 100%;
+    padding-left: 40px;
+    margin-top: 20px;
+  }
+  main .mainContainer .fourth-container .innerFourth .crew .innerCrewleftSide .crewSlider {
+    margin-left: 0px;
+  }
+  main .mainContainer .fifth-container .innerFifth .pickTechnology {
+    width: 70%;
+  }
+  main .mainContainer .fifth-container .innerFifth .pickTechnology p {
+    font-size: 21px;
+  }
+  main .mainContainer .fifth-container .innerFifth .pickTechnology p span {
+    font-size: 21px;
   }
 }
 @media (max-width: 1300px) {
