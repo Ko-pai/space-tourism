@@ -143,10 +143,12 @@
         if(i == 0){
             slider.style.width = liTag.offsetWidth + "px"
             good.style.backgroundColor = "transparent"
+            good.style.marginTop = "80px"
             good.innerHTML = homeAddContent
+
             myfunc1()
             body.style.overflow = "hidden"
-            main.style.height = "auto"
+            main.style.height = "100vh"
         }
 
         function litagClickFunction(e) {
@@ -436,7 +438,7 @@
                     crewName.textContent = `${crewData0.name}`
                     crewBio.textContent =`${crewData0.bio}`
                     crewImage.src = `${crewData0.images.webp}`
-                    crewImage.style.width = "70%"
+                    // crewImage.style.width = "80%"
                     crewName.style.fontSize = "34px"
                 }else if(active == 1) {
                     
@@ -444,14 +446,14 @@
                     crewName.textContent = `${crewData1.name}`
                     crewBio.textContent =`${crewData1.bio}`
                     crewImage.src = `${crewData1.images.webp}`
-                    crewImage.style.width = "70%"
+                    // crewImage.style.width = "80%"
                     crewName.style.fontSize = "28px"
                 }else if(active == 2) {
                     crewPosition.textContent = `${crewData2.role}`
                     crewName.textContent = `${crewData2.name}`
                     crewBio.textContent =`${crewData2.bio}`
                     crewImage.src = `${crewData2.images.webp}`
-                    crewImage.style.width = "70%"
+                    // crewImage.style.width = "80%"
                     crewName.style.fontSize = "34px"
 
                 }else if(active == 3) {
@@ -460,7 +462,7 @@
                     crewName.textContent = `${crewData3.name}`
                     crewBio.textContent =`${crewData3.bio}`
                     crewImage.src = `${crewData3.images.webp}`
-                    crewImage.style.width = "70%"
+                    // crewImage.style.width = "80%"
                     crewName.style.fontSize = "34px"
                     
                 }

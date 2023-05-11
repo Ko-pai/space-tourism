@@ -1332,7 +1332,7 @@ body{
                                 .innerDestinatinRightSide{
 
                                     .universeNameContainer{
-
+                                        width: 50%;
 
                                         .list-of-universe{
                                             width: 100%;
@@ -1444,10 +1444,10 @@ body{
                                 .innerCrewRightSide{
 
                                     .crewImage{
-                                        width: 70%;
+                                        width: 50%;
                                         height: auto;
                                         
-                                        top: 0px;
+                                        top: 10px;
                                     }
                                 }
                             }
@@ -1532,7 +1532,7 @@ body{
         }
 
 @media(max-width : 560px){
-
+    
 
     main{
 
@@ -1581,7 +1581,7 @@ body{
             .fourth-container{
 
                 .innerFourth{
-
+                    height: auto;
                     .crew{
 
                         .innerCrewleftSide{
@@ -1591,6 +1591,14 @@ body{
                                 
                             }
                         }
+
+                        .innerCrewRightSide{
+
+                            .crewImage{
+                                top: -35px;
+                                width: 100%;
+                            }
+                        }
                     }
                 }
             }
@@ -1598,6 +1606,8 @@ body{
             .fifth-container{
 
                 .innerFifth{
+                    height: 100vh;
+
 
                     .pickTechnology{
                         width: 70%;
@@ -1664,7 +1674,8 @@ body{
                 
                 main{
                     overflow-x: hidden;
-                    
+                    height: 100vh;
+
                     .hamburgerSlider{
                         
                         width: 0;
@@ -1714,8 +1725,9 @@ body{
                             .destination{
 
                                 .innerDestinatinLeftSide{
+                                    margin-left: 0px;
                                     .universePhoto{
-                                        margin-left: 17px;
+                                        margin-left: 12px;
                                     }
 
                                 }
@@ -1774,7 +1786,7 @@ body{
 
                                     .crewSlider{
                                         margin-left: 30px;
-                                        margin-bottom: 30px;
+                                        margin-bottom: 80px;
                                         margin-top: 40px;
                                         width: 50%;
                                     }

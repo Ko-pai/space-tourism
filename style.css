@@ -1132,6 +1132,9 @@ main .mainContainer .fifth-container .innerFifth .technologyContent .right img {
     height: 160px;
     margin-left: -180px;
   }
+  main .mainContainer .third-container .innerThird .destination .innerDestinatinRightSide .universeNameContainer {
+    width: 50%;
+  }
   main .mainContainer .third-container .innerThird .destination .innerDestinatinRightSide .universeNameContainer .list-of-universe {
     width: 100%;
   }
@@ -1214,9 +1217,9 @@ main .mainContainer .fifth-container .innerFifth .technologyContent .right img {
     position: relative;
   }
   main .mainContainer .fourth-container .innerFourth .crew .innerCrewRightSide .crewImage {
-    width: 70%;
+    width: 50%;
     height: auto;
-    top: 0px;
+    top: 10px;
   }
   main .mainContainer .fifth-container .innerFifth {
     width: 100vw;
@@ -1286,8 +1289,18 @@ main .mainContainer .fifth-container .innerFifth .technologyContent .right img {
     padding-left: 40px;
     margin-top: 20px;
   }
+  main .mainContainer .fourth-container .innerFourth {
+    height: auto;
+  }
   main .mainContainer .fourth-container .innerFourth .crew .innerCrewleftSide .crewSlider {
     margin-left: 0px;
+  }
+  main .mainContainer .fourth-container .innerFourth .crew .innerCrewRightSide .crewImage {
+    top: -35px;
+    width: 100%;
+  }
+  main .mainContainer .fifth-container .innerFifth {
+    height: 100vh;
   }
   main .mainContainer .fifth-container .innerFifth .pickTechnology {
     width: 70%;
@@ -1324,6 +1337,7 @@ main .mainContainer .fifth-container .innerFifth .technologyContent .right img {
   }
   body main {
     overflow-x: hidden;
+    height: 100vh;
   }
   body main .hamburgerSlider {
     width: 0;
@@ -1357,8 +1371,11 @@ main .mainContainer .fifth-container .innerFifth .technologyContent .right img {
     font-size: 18px;
     margin-right: 10px;
   }
+  main .mainContainer .third-container .innerThird .destination .innerDestinatinLeftSide {
+    margin-left: 0px;
+  }
   main .mainContainer .third-container .innerThird .destination .innerDestinatinLeftSide .universePhoto {
-    margin-left: 17px;
+    margin-left: 12px;
   }
   main .mainContainer .third-container .innerThird .destination .innerDestinatinRightSide .list-of-universe {
     margin-right: 0;
@@ -1394,7 +1411,7 @@ main .mainContainer .fifth-container .innerFifth .technologyContent .right img {
   }
   main .mainContainer .fourth-container .innerFourth .crew .innerCrewleftSide .crewSlider {
     margin-left: 30px;
-    margin-bottom: 30px;
+    margin-bottom: 80px;
     margin-top: 40px;
     width: 50%;
   }
