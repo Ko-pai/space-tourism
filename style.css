@@ -1193,6 +1193,9 @@ main .mainContainer .fifth-container .innerFifth .technologyContent .right img {
     margin-left: -100vw;
     margin-top: 0px;
   }
+  main .mainContainer .third-container {
+    justify-content: unset;
+  }
   main .mainContainer .third-container .innerThird {
     margin-left: 0px;
   }
