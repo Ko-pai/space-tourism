@@ -143,7 +143,7 @@
         if(i == 0){
             slider.style.width = liTag.offsetWidth + "px"
             good.style.backgroundColor = "transparent"
-            good.style.marginTop = "80px"
+            
             good.innerHTML = homeAddContent
 
             myfunc1()
